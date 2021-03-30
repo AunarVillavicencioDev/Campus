@@ -39,12 +39,12 @@
 
             <div class="dropdown d-inline-block d-lg-none ms-2">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="uil-search"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                    aria-labelledby="page-header-search-dropdown">
-                    
+                     aria-labelledby="page-header-search-dropdown">
+
                     <form class="p-3">
                         <div class="form-group m-0">
                             <div class="input-group">
@@ -57,29 +57,28 @@
                     </form>
                 </div>
             </div>
-
             <div class="dropdown d-inline-block language-switch">
                 <button type="button" class="btn header-item waves-effect"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    @switch(Session::get('lang'))
-                        @case('ru')
-                            <img src="{{ URL::asset('/assets/images/flags/russia.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">Russian</span>
-                        @break
-                        @case('it')
-                            <img src="{{ URL::asset('/assets/images/flags/italy.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">Italian</span>
-                        @break
-                        @case('de')
-                            <img src="{{ URL::asset('/assets/images/flags/germany.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">German</span>
-                        @break
-                        @case('es')
-                            <img src="{{ URL::asset('/assets/images/flags/spain.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">Spanish</span>
-                        @break
-                        @default
-                            <img src="{{ URL::asset('/assets/images/flags/us.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">English</span>
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                    @switch(App::currentLocale())
+                    @case('ru')
+                    <img src="{{ URL::asset('/assets/images/flags/russia.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">Russian</span>
+                    @break
+                    @case('it')
+                    <img src="{{ URL::asset('/assets/images/flags/italy.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">Italian</span>
+                    @break
+                    @case('de')
+                    <img src="{{ URL::asset('/assets/images/flags/germany.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">German</span>
+                    @break
+                    @case('es')
+                    <img src="{{ URL::asset('/assets/images/flags/spain.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">Español</span>
+                    @break
+                    @default
+                    <img src="{{ URL::asset('/assets/images/flags/us.jpg')}}" alt="Header Language" height="16"> <span class="align-middle">English</span>
                     @endswitch
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
-                    
+
                     <!-- item-->
                     <a href="{{ url('index/en') }}" class="dropdown-item notify-item">
                         <img src="{{ URL::asset('assets/images/flags/us.jpg')}}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
@@ -109,7 +108,7 @@
 
             <div class="dropdown d-none d-lg-inline-block ms-1">
                 <button type="button" class="btn header-item noti-icon waves-effect"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="uil-apps"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
@@ -167,12 +166,12 @@
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="uil-bell"></i>
                     <span class="badge bg-danger rounded-pill">3</span>
                 </button>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                    aria-labelledby="page-header-notifications-dropdown">
+                     aria-labelledby="page-header-notifications-dropdown">
                     <div class="p-3">
                         <div class="row align-items-center">
                             <div class="col">
@@ -203,7 +202,7 @@
                         <a href="" class="text-reset notification-item">
                             <div class="d-flex align-items-start">
                                 <img src="{{ URL::asset('/assets/images/users/avatar-3.jpg') }}"
-                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                     class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                 <div class="flex-1">
                                     <h6 class="mt-0 mb-1">James Lemire</h6>
                                     <div class="font-size-12 text-muted">
@@ -233,7 +232,7 @@
                         <a href="" class="text-reset notification-item">
                             <div class="d-flex align-items-start">
                                 <img src="{{ URL::asset('/assets/images/users/avatar-4.jpg') }}"
-                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                     class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                 <div class="flex-1">
                                     <h6 class="mt-0 mb-1">Salena Layfield</h6>
                                     <div class="font-size-12 text-muted">
@@ -254,9 +253,9 @@
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="rounded-circle header-profile-user" src="{{ URL::asset('/assets/images/users/avatar-4.jpg') }}"
-                        alt="Header Avatar">
+                         alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1 fw-medium font-size-15">{{Str::ucfirst(Auth::user()->name)}}</span>
                     <i class="uil-angle-down d-none d-xl-inline-block font-size-15"></i>
                 </button>
@@ -278,7 +277,7 @@
                     <i class="uil-cog"></i>
                 </button>
             </div>
-            
+
         </div>
     </div>
 </header>

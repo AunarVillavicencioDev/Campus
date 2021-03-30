@@ -2,7 +2,7 @@
 
 return [
   "Menu"=> "Menú",
-  "Dashboard"=> "Tablero",
+  "Dashboard"=> "Escritorio",
   "Layouts"=> "diseños",
   "Horizontal"=> "Horizontal",
   "Dark_Sidebar"=> "Barra lateral oscura",
