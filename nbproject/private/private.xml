@@ -5,8 +5,13 @@
         <group>
             <file>file:/C:/xampp/htdocs/campus/config/app.php</file>
             <file>file:/C:/xampp/htdocs/campus/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/admin/DashboarController.php</file>
+            <file>file:/C:/xampp/htdocs/campus/resources/views/auth/register.blade.php</file>
             <file>file:/C:/xampp/htdocs/campus/resources/views/layouts/sidebar.blade.php</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/Auth/RegisterController.php</file>
+            <file>file:/C:/xampp/htdocs/campus/resources/lang/en/register.php</file>
             <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/HomeController.php</file>
+            <file>file:/C:/xampp/htdocs/campus/database/migrations/2014_10_12_000000_create_users_table.php</file>
         </group>
     </open-files>
 </project-private>
