@@ -12,6 +12,8 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "laravelcollective/html": "^6.2",
+        "laraveles/spanish": "^1.5",
         "spatie/laravel-permission": "^4.0"
     },
     "require-dev": {
@@ -27,7 +29,10 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "App/Helpers/AcctionValidate.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

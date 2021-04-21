@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App;
 
 class InscripcionController extends Controller {
 
@@ -17,7 +18,7 @@ class InscripcionController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
+        return view('admin.inscripciones.index');
     }
 
     /**
