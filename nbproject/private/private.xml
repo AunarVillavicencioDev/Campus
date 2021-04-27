@@ -5,12 +5,14 @@
         <group>
             <file>file:/C:/xampp/htdocs/campus/resources/views/admin/inscripciones/index.blade.php</file>
             <file>file:/C:/xampp/htdocs/campus/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Helpers/AcctionValidate.php</file>
+            <file>file:/C:/xampp/htdocs/campus/public/js/pages/inscripcion.js</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Models/Inscription.php</file>
             <file>file:/C:/xampp/htdocs/campus/resources/views/layouts/sidebar.blade.php</file>
             <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/admin/InscripcionController.php</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Models/Country.php</file>
             <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/HomeController.php</file>
-            <file>file:/C:/xampp/htdocs/campus/resources/lang/es/inscripcion.php</file>
             <file>file:/C:/xampp/htdocs/campus/resources/views/layouts/horizontal.blade.php</file>
-            <file>file:/C:/xampp/htdocs/campus/app/Http/Middleware/Localization.php</file>
         </group>
     </open-files>
 </project-private>

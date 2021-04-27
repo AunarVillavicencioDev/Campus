@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App;
+use App\Http\Requests\InscriptioCreateRequest;
+use App\Models\Country;
 
 class InscripcionController extends Controller {
 
@@ -18,7 +20,15 @@ class InscripcionController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('admin.inscripciones.index');
+        $paisesDb = Country::get()->toArray();
+//        dd($paisesDb);
+        $paises = array();
+        foreach ($paisesDb as $key => $value) {
+            $paises[$value['pais']] = $value['pais'];
+//            array_push($paises, array($value->pais => $value->pais));
+        }
+//        dd($paises);
+        return view('admin.inscripciones.index', compact('paises'));
     }
 
     /**
@@ -36,8 +46,9 @@ class InscripcionController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
-        //
+    public function store(InscriptioCreateRequest $request) {
+
+        return $request;
     }
 
     /**
