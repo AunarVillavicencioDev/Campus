@@ -3,15 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/campus/config/app.php</file>
+            <file>file:/C:/xampp/htdocs/campus/resources/views/admin/inscripciones/index.blade.php</file>
             <file>file:/C:/xampp/htdocs/campus/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/admin/DashboarController.php</file>
-            <file>file:/C:/xampp/htdocs/campus/resources/views/auth/register.blade.php</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Helpers/AcctionValidate.php</file>
+            <file>file:/C:/xampp/htdocs/campus/public/js/pages/inscripcion.js</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Models/Inscription.php</file>
             <file>file:/C:/xampp/htdocs/campus/resources/views/layouts/sidebar.blade.php</file>
-            <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/Auth/RegisterController.php</file>
-            <file>file:/C:/xampp/htdocs/campus/resources/lang/en/register.php</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/admin/InscripcionController.php</file>
+            <file>file:/C:/xampp/htdocs/campus/app/Models/Country.php</file>
             <file>file:/C:/xampp/htdocs/campus/app/Http/Controllers/HomeController.php</file>
-            <file>file:/C:/xampp/htdocs/campus/database/migrations/2014_10_12_000000_create_users_table.php</file>
+            <file>file:/C:/xampp/htdocs/campus/resources/views/layouts/horizontal.blade.php</file>
         </group>
     </open-files>
 </project-private>
