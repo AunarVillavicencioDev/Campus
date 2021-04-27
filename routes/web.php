@@ -19,17 +19,21 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('index/{locale}', [App\Http\Controllers\HomeController::class, 'lang']);
+
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/tablero', [App\Http\Controllers\admin\DashboarController::class, 'index'])->name('home');
-Route::get('/cargadocumentos', [App\Http\Controllers\admin\cargadocumentoController::class, 'index'])->name('cargadocumentos');
-Route::get('/pagos', [App\Http\Controllers\admin\pagoController::class, 'index'])->name('pagos');
-Route::get('/modal', [App\Http\Controllers\admin\pagoController::class, 'modal'])->name('factura');
+Route::get('/escritorio', [App\Http\Controllers\admin\DashboarController::class, 'index'])->name('home');
+
+
+Route::get('/inscripcion', [App\Http\Controllers\admin\InscripcionController::class, 'index'])->name('inscripcion.index');
 
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
     $exitCode = Artisan::call('db:seed --class=UserSeeder');
     $exitCode = Artisan::call('db:seed --class=PermissionSeeder');
+    $exitCode = Artisan::call('db:seed --class=ProgramSeeder');
+    $exitCode = Artisan::call('db:seed --class=InscriptionSeeder');
     return 'refresh db Ok';
 });
 

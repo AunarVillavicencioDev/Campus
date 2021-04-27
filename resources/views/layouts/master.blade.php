@@ -2,6 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    {{ AcctionValidate::validaInscripcion(Auth::id()) }}
     @include('layouts.title-meta')
     @include('layouts.head')
 </head>
@@ -21,6 +22,7 @@
         <div class="main-content">
             <div class="page-content">
                 <div class="container-fluid">
+                    
                     @yield('content')
                 </div>
                 <!-- container-fluid -->
