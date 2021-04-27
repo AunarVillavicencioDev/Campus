@@ -27,7 +27,6 @@ Route::get('/escritorio', [App\Http\Controllers\admin\DashboarController::class,
 
 
 Route::get('/inscripcion', [App\Http\Controllers\admin\InscripcionController::class, 'index'])->name('inscripcion.index');
-Route::post('/inscripcion/store', [App\Http\Controllers\admin\InscripcionController::class, 'store'])->name('inscripcion.store');
 
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
@@ -35,7 +34,6 @@ Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('db:seed --class=PermissionSeeder');
     $exitCode = Artisan::call('db:seed --class=ProgramSeeder');
     $exitCode = Artisan::call('db:seed --class=InscriptionSeeder');
-    $exitCode = Artisan::call('db:seed --class=CountrySeeder');
     return 'refresh db Ok';
 });
 
