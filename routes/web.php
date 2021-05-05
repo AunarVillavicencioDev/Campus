@@ -26,7 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
-//    $exitCode = Artisan::call('db:seed --class=UserSeeder');
+    $exitCode = Artisan::call('db:seed --class=UserSeeder');
 //    $exitCode = Artisan::call('db:seed --class=PermissionSeeder');
 //    $exitCode = Artisan::call('db:seed --class=ProgramSeeder');
 //    $exitCode = Artisan::call('db:seed --class=InscriptionSeeder');
