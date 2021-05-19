@@ -37,4 +37,5 @@ return array(
     'ed962a97bd972bc82007176b647d4e36' => $vendorDir . '/facade/ignition/src/helpers.php',
     '377b22b161c09ed6e5152de788ca020a' => $vendorDir . '/spatie/laravel-permission/src/helpers.php',
     '8c8b2bf0a1155316385099a930e1b24d' => $baseDir . '/app/Helpers/AcctionValidate.php',
+    'ccfc7b6a748013009848ab6c24f01175' => $baseDir . '/app/Helpers/Alerts.php',
 );

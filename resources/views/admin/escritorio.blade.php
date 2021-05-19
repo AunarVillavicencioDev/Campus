@@ -12,7 +12,6 @@
 @slot('pagetitle') Minible @endslot
 @slot('title') Dashboard @endslot
 @endcomponent 
-
 <div class="row">
     <div class="col-md-6 col-xl-3">
         <div class="card">

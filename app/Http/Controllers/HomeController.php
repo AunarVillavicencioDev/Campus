@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
-{
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
+
+class HomeController extends Controller {
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->middleware('auth');
     }
 
@@ -21,8 +23,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
+    public function index() {
         return view('home');
     }
+
+    /* Language Translation */
+
+    public function lang($locale) {
+        if ($locale) {
+            App::setLocale($locale);
+            Session::put('lang', $locale);
+            Session::save();
+            return redirect()->back()->with('locale', $locale);
+        } else {
+            return redirect()->back();
+        }
+    }
+
 }

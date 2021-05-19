@@ -42,7 +42,7 @@
                 </li>
                 
                 <li>
-                    <a href="{{route('escritorio')}}">
+                    <a href="{{route('inscripcion.index')}}">
                         <i class="uil-user-circle"></i>
                         <span>@lang('inscripcion.name')</span>
                     </a>

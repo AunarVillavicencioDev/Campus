@@ -38,6 +38,7 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
         '8c8b2bf0a1155316385099a930e1b24d' => __DIR__ . '/../..' . '/app/Helpers/AcctionValidate.php',
+        'ccfc7b6a748013009848ab6c24f01175' => __DIR__ . '/../..' . '/app/Helpers/Alerts.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -519,6 +520,7 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Helpers\\Alerts' => __DIR__ . '/../..' . '/app/Helpers/Alerts.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -537,6 +539,12 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Models\\Alert' => __DIR__ . '/../..' . '/app/Models/Alert.php',
+        'App\\Models\\Countrie' => __DIR__ . '/../..' . '/app/Models/Countrie.php',
+        'App\\Models\\Inscription' => __DIR__ . '/../..' . '/app/Models/Inscription.php',
+        'App\\Models\\Permissions' => __DIR__ . '/../..' . '/app/Models/Permissions.php',
+        'App\\Models\\Program' => __DIR__ . '/../..' . '/app/Models/Program.php',
+        'App\\Models\\Roles' => __DIR__ . '/../..' . '/app/Models/Roles.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -647,7 +655,12 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Seeders\\AlertSeeder' => __DIR__ . '/../..' . '/database/seeders/AlertSeeder.php',
+        'Database\\Seeders\\CountrySeeder' => __DIR__ . '/../..' . '/database/seeders/CountrySeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\InscriptionSeeder' => __DIR__ . '/../..' . '/database/seeders/InscriptionSeeder.php',
+        'Database\\Seeders\\PermissionSeeder' => __DIR__ . '/../..' . '/database/seeders/PermissionSeeder.php',
+        'Database\\Seeders\\ProgramSeeder' => __DIR__ . '/../..' . '/database/seeders/ProgramSeeder.php',
         'Database\\Seeders\\UserSeeder' => __DIR__ . '/../..' . '/database/seeders/UserSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',

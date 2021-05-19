@@ -12,6 +12,7 @@
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.2",
+        "laravelcollective/html": "^6.2",
         "spatie/laravel-permission": "^4.0"
     },
     "require-dev": {
@@ -29,7 +30,8 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "app/Helpers/AcctionValidate.php"
+            "app/Helpers/AcctionValidate.php",
+            "app/Helpers/Alerts.php"
         ]
     },
     "autoload-dev": {

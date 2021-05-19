@@ -7,7 +7,7 @@
  */
 
 use Illuminate\Support\Facades\URL;
-use App\Models\Inscription;
+use App\Models\Inscription; 
 use Illuminate\Support\Facades\Redirect;
 
 class AcctionValidate {
