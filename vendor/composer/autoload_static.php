@@ -37,6 +37,7 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
         '8c8b2bf0a1155316385099a930e1b24d' => __DIR__ . '/../..' . '/app/Helpers/AcctionValidate.php',
         'ccfc7b6a748013009848ab6c24f01175' => __DIR__ . '/../..' . '/app/Helpers/Alerts.php',
     );
@@ -168,6 +169,7 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -489,6 +491,10 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -530,6 +536,9 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\admin\\EscritorioController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/EscritorioController.php',
+        'App\\Http\\Controllers\\admin\\InscripcionController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/InscripcionController.php',
+        'App\\Http\\Controllers\\admin\\PagoController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/PagoController.php',
+        'App\\Http\\Controllers\\admin\\cargadocumentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/cargadocumentoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -539,6 +548,8 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\InscriptioCreateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/InscriptioCreateRequest.php',
+        'App\\Mail\\OrderShipped' => __DIR__ . '/../..' . '/app/Mail/OrderShipped.php',
         'App\\Models\\Alert' => __DIR__ . '/../..' . '/app/Models/Alert.php',
         'App\\Models\\Countrie' => __DIR__ . '/../..' . '/app/Models/Countrie.php',
         'App\\Models\\Inscription' => __DIR__ . '/../..' . '/app/Models/Inscription.php',
@@ -643,6 +654,13 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',
