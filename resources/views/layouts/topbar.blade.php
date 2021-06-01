@@ -8,7 +8,7 @@
                         <img src="{{ URL::asset('/assets/images/logo-sm.png') }}" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="20">
+                        <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="34">
                     </span>
                 </a>
 
@@ -57,7 +57,7 @@
                     </form>
                 </div>
             </div>
-            <div class="dropdown d-inline-block language-switch">
+<!--            <div class="dropdown d-inline-block language-switch">
                 <button type="button" class="btn header-item waves-effect"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                     @switch(App::currentLocale())
@@ -79,32 +79,32 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
 
-                    <!-- item-->
+                     item
                     <a href="{{ url('index/en') }}" class="dropdown-item notify-item">
                         <img src="{{ URL::asset('assets/images/flags/us.jpg')}}" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
                     </a>
 
-                    <!-- item-->
+                     item
                     <a href="{{ url('index/es') }}" class="dropdown-item notify-item">
                         <img src="{{ URL::asset('assets/images/flags/spain.jpg')}}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
                     </a>
 
-                    <!-- item-->
+                     item
                     <a href="{{ url('index/de') }}" class="dropdown-item notify-item">
                         <img src="{{ URL::asset('assets/images/flags/germany.jpg')}}" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
                     </a>
 
-                    <!-- item-->
+                     item
                     <a href="{{ url('index/it') }}" class="dropdown-item notify-item">
                         <img src="{{ URL::asset('assets/images/flags/italy.jpg')}}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
                     </a>
 
-                    <!-- item-->
+                     item
                     <a href="{{ url('index/ru') }}" class="dropdown-item notify-item">
                         <img src="{{ URL::asset('assets/images/flags/russia.jpg')}}" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
                     </a>
                 </div>
-            </div>
+            </div>-->
 
             <div class="dropdown d-none d-lg-inline-block ms-1">
                 <button type="button" class="btn header-item noti-icon waves-effect"

@@ -53,4 +53,6 @@ return [
     'nivel_academico' => 'Nivel académico aprobado hasta el momento',
     'discapacidad' => 'Discapacidad',
     'numero_de_hijos' => 'Número de hijos',
+    'eps' => 'Ingrese su eps o ips',
+    'sisben' => 'Esta registrado en el sisben',
 ];

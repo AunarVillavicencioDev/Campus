@@ -46,6 +46,8 @@ class CreateInscriptionsTable extends Migration {
             $table->string('puntaje_saber');
             $table->string('colegio');
             $table->string('nivel_academico');
+            $table->string('eps');
+            $table->string('sisben');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('programa_id')->references('id')->on('programs')->onDelete('cascade');
             $table->timestamps();

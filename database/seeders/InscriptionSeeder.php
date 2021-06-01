@@ -46,6 +46,8 @@ class InscriptionSeeder extends Seeder {
             'puntaje_saber' => '1234',
             'colegio' => 'caldas',
             'nivel_academico' => 'Tecnico',
+            'eps' => 'Sanitas',
+            'sisben' => 'Si',
         ]);
     }
 

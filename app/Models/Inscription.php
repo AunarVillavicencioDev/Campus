@@ -43,6 +43,8 @@ class Inscription extends Model {
         'puntaje_saber',
         'colegio',
         'nivel_academico',
+        'eps',
+        'sisben',
     ];
 
 }

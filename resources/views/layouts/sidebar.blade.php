@@ -40,13 +40,32 @@
                         <span>@lang('translation.Dashboard')</span>
                     </a>
                 </li>
-                
+                @if(ActionValidate::valideUserInscripcion())
                 <li>
                     <a href="{{route('inscripcion.index')}}">
                         <i class="uil-user-circle"></i>
                         <span>@lang('inscripcion.name')</span>
                     </a>
                 </li>
+                @endif
+                <li>
+                    <a href="{{route('cargadocumentos.index')}}">
+                        <i class="uil-file-upload-alt"></i>
+                        <span>@lang('documentos.name')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('pagos.index')}}">
+                        <i class="uil-shopping-cart-alt"></i>
+                        <span>@lang('pagos.name')</span>
+                    </a>
+                </li>
+<!--                <li>
+                    <a href="{{route('inscripcion.index')}}">
+                        <i class="uil-user-circle"></i>
+                        <span>@lang('inscripcion.name')</span>
+                    </a>
+                </li>-->
                 
                 
 

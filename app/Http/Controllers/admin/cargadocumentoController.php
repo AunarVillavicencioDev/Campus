@@ -4,22 +4,20 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Helpers\Helper;
 
-class cargadocumentoController extends Controller
-{
+class cargadocumentoController extends Controller {
 
     public function __construct() {
         $this->middleware('auth');
     }
-
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         return view('admin.cargadedocumentos.cargadocumentos');
     }
 
@@ -28,8 +26,7 @@ class cargadocumentoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -39,9 +36,10 @@ class cargadocumentoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+        $as = Helper::uploadFile($request->file('documentoidentificacion'), $request->user_id);
+        dd($as);
+        return $request;
     }
 
     /**
@@ -50,8 +48,7 @@ class cargadocumentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -61,8 +58,7 @@ class cargadocumentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -73,8 +69,7 @@ class cargadocumentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -84,8 +79,8 @@ class cargadocumentoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }

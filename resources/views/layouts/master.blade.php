@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    {{ AcctionValidate::validaInscripcion(Auth::id()) }}
+    {{ ActionValidate::validaInscripcion(Auth::id()) }}
     @include('layouts.title-meta')
     @include('layouts.head')
 </head>

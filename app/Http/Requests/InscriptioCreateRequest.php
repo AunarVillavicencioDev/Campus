@@ -22,6 +22,7 @@ class InscriptioCreateRequest extends FormRequest {
      */
     public function rules() {
         return [
+            'user_id' => 'nullable|unique:inscriptions',
             'pri_nombre' => 'required|max:255',
             'seg_nombre' => 'required|max:255',
             'pri_apellido' => 'required|max:255',
@@ -40,26 +41,29 @@ class InscriptioCreateRequest extends FormRequest {
             'deparatamento_recidencia' => 'required|max:255',
             'pais_recidencia' => 'required|max:255',
             'discapacidad' => 'required|max:255',
-            'numero_de_hijos' => 'required|max:255',
+            'numero_de_hijos' => 'required|max:255|numeric',
             'programa_id' => 'required|max:255',
             'periodo_academico_a' => 'required|max:255',
             'periodo_academico_b' => 'required|max:255',
             'periodo_academico' => 'required|max:255',
             'jornada' => 'required|max:255',
-            'fecha_saber' => 'required|max:255',
-            'codigo_saber' => 'required|max:255',
-            'puntaje_saber' => 'required|max:255',
+            'fecha_saber' => 'required|max:255|date',
+            'codigo_saber' => 'required|numeric',
+            'puntaje_saber' => 'required|numeric',
             'colegio' => 'required|max:255',
             'estado_civil' => 'required|max:255',
             'rh' => 'required|max:255',
-            'libreta_militar' => 'required|max:255',
+            'libreta_militar' => 'required|numeric',
             'estrato' => 'required|max:255',
             'nivel_academico' => 'required|max:255',
+            'eps' => 'required|max:255',
+            'sisben' => 'required|max:255',
         ];
     }
 
     public function messages() {
         return [
+            'user_id.unique' => 'El usuario ya tiene un registro de inscripción.',
             'pri_nombre.required' => 'El campo ' . __('inscripcion.pri_nombre') . ' es requerido.',
             'seg_nombre.required' => 'El campo ' . __('inscripcion.seg_nombre') . ' es requerido.',
             'pri_apellido.required' => 'El campo ' . __('inscripcion.pri_apellido') . ' es requerido.',
@@ -76,6 +80,7 @@ class InscriptioCreateRequest extends FormRequest {
             'rh.required' => 'El campo ' . __('inscripcion.rh') . ' es requerido.',
             'genero.required' => 'El campo ' . __('inscripcion.genero') . ' es requerido.',
             'libreta_militar.required' => 'El campo ' . __('inscripcion.libreta_militar') . ' es requerido.',
+            'libreta_militar.numeric' => 'El campo ' . __('inscripcion.libreta_militar') . ' debe ser un numero.',
             'estrato.required' => 'El campo ' . __('inscripcion.estrato') . ' es requerido.',
             'direcion_recidencia.required' => 'El campo ' . __('inscripcion.direcion_recidencia') . ' es requerido.',
             'municipio_recidencia.required' => 'El campo ' . __('inscripcion.municipio_recidencia') . ' es requerido.',
@@ -88,9 +93,13 @@ class InscriptioCreateRequest extends FormRequest {
             'jornada.required' => 'El campo ' . __('inscripcion.jornada') . ' es requerido.',
             'fecha_saber.required' => 'El campo ' . __('inscripcion.fecha_saber') . ' es requerido.',
             'codigo_saber.required' => 'El campo ' . __('inscripcion.codigo_saber') . ' es requerido.',
+            'codigo_saber.numeric' => 'El campo ' . __('inscripcion.codigo_saber') . ' debe ser un numero.',
             'puntaje_saber.required' => 'El campo ' . __('inscripcion.puntaje_saber') . ' es requerido.',
+            'puntaje_saber.numeric' => 'El campo ' . __('inscripcion.puntaje_saber') . ' debe ser un numero.',
             'colegio.required' => 'El campo ' . __('inscripcion.colegio') . ' es requerido.',
             'nivel_academico.required' => 'El campo ' . __('inscripcion.nivel_academico') . ' es requerido.',
+            'eps' => 'El campo ' . __('inscripcion.eps') . ' es requerido.',
+            'sisben' => 'El campo ' . __('inscripcion.sisben') . ' es requerido.',
         ];
     }
 
