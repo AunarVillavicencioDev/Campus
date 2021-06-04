@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Helpers\Helper;
+use App\Http\Requests\DocumentsCreateNewRequest;
+use App\Http\Requests\DocumentsCreateHomologRequest;
 
 class cargadocumentoController extends Controller {
 
@@ -17,8 +19,7 @@ class cargadocumentoController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() {
-        $typeForm = '1';
+    public function index($typeForm = '1') {
         return view('admin.cargadedocumentos.cargadocumentos', compact('typeForm'));
     }
 
@@ -37,17 +38,18 @@ class cargadocumentoController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeNew(Request $request) {
-        
-        $as = Helper::uploadFile($request->file('documentoidentificacion'), $request->user_id);
-        dd($as);
+    public function storeNew(DocumentsCreateNewRequest $request) {
+
+//        $as = Helper::uploadFile($request->file('documentoidentificacion'), $request->user_id);
+//        dd($as);
         return $request;
     }
-    
-    public function storeHomolog(Request $request) {
-        $as = Helper::uploadFile($request->file('documentoidentificacion'), $request->user_id);
-        dd($as);
-        return $request;
+
+    public function storeHomolog(DocumentsCreateHomologRequest $request) {
+//        $as = Helper::uploadFile($request->file('documentoidentificacion'), $request->user_id);
+//        dd($as);
+//        dd($request->Tipo_de_Solicitud);
+        return back();
     }
 
     /**
@@ -101,7 +103,7 @@ class cargadocumentoController extends Controller {
                 break;
         }
 
-        return view('admin.cargadedocumentos.cargadocumentos', compact('typeForm'));
+        return redirect()->route('cargadocumentos.index', compact('typeForm'));
     }
 
 }

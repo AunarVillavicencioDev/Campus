@@ -29,26 +29,24 @@ Route::get('/inscripcion', [App\Http\Controllers\admin\InscripcionController::cl
 Route::post('/inscripcion/store', [App\Http\Controllers\admin\InscripcionController::class, 'store'])->name('inscripcion.store');
 
 
-Route::get('/cargadocumentos', [App\Http\Controllers\admin\cargadocumentoController::class, 'index'])->name('cargadocumentos.index');
-Route::post('/cargadocumentos/valida/form', [App\Http\Controllers\admin\cargadocumentoController::class, 'typeForm'])->name('cargadocumentos.valida.form');
+Route::get('/cargadocumentos/{typeForm?}', [App\Http\Controllers\admin\cargadocumentoController::class, 'index'])->name('cargadocumentos.index');
+Route::put('/cargadocumentos/valida/form', [App\Http\Controllers\admin\cargadocumentoController::class, 'typeForm'])->name('cargadocumentos.valida.form');
 Route::post('/cargadocumentos/store/new', [App\Http\Controllers\admin\cargadocumentoController::class, 'storeNew'])->name('cargadocumentos.store.new');
 Route::post('/cargadocumentos/store/homologation', [App\Http\Controllers\admin\cargadocumentoController::class, 'storeHomolog'])->name('cargadocumentos.store.homologation');
 Route::get('storage/app/aunar/Documents/{id}/{archivo}', function ($id, $archivo) {
-    
+
     $file = 'Documents/' . $id . '/' . $archivo;
     $path_file = storage_path() . '/app/aunar/' . $file;
 //    $url = $path_url . '/storage/aunar/Documents/' . $id . '/' . $archivo;
 //    $existe = Storage::disk('aunar')->exists($file);
 //    $url_file = Storage::disk('aunar')->url("app/aunar/{$file}");
 //    $path_url = Request::root();
-    
 //     //verificamos si el archivo existe y lo retornamos
     if (Storage::disk('aunar')->exists($file)) {
         return response()->download($path_file);
     }
     //si no se encuentra lanzamos un error 404.
-     abort(404);
-
+    abort(404);
 });
 
 Route::get('/pagos', [App\Http\Controllers\admin\pagoController::class, 'index'])->name('pagos.index');

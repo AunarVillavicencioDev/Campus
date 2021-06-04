@@ -26,10 +26,10 @@ class AppServiceProvider extends ServiceProvider {
         Schema::defaultStringLength(191);
 
         Blade::if('valiProgram104600', function ($value) {
-            if ($value != 104600) {
-                return 0;
-            } else {
+            if ($value == 104600) {
                 return 1;
+            } else {
+                return 0;
             }
         });
         

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDocumentesUsersTable extends Migration {
+class CreateDocumentosUsersTable extends Migration {
 
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateDocumentesUsersTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('documentes_users', function (Blueprint $table) {
+        Schema::create('documentos_users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('tipo_form');
@@ -42,7 +42,7 @@ class CreateDocumentesUsersTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('documentes_users');
+        Schema::dropIfExists('documentos_users');
     }
 
 }
