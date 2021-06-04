@@ -33,6 +33,7 @@ return array(
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\InscriptioCreateRequest' => $baseDir . '/app/Http/Requests/InscriptioCreateRequest.php',
+    'App\\Http\\Requests\\StoreDocumentsCreateRequest' => $baseDir . '/app/Http/Requests/StoreDocumentsCreateRequest.php',
     'App\\Mail\\OrderShipped' => $baseDir . '/app/Mail/OrderShipped.php',
     'App\\Models\\Alert' => $baseDir . '/app/Models/Alert.php',
     'App\\Models\\Countrie' => $baseDir . '/app/Models/Countrie.php',

@@ -59,4 +59,15 @@ class ActionValidate {
         }
     }
 
+    public static function validNewHomologRoute($param) {
+        switch ($param) {
+            case '1':
+                return 'cargadocumentos.store.new';
+                break;
+            case '2':
+                return 'cargadocumentos.store.homologation';
+                break;
+        }
+    }
+
 }

@@ -30,7 +30,9 @@ Route::post('/inscripcion/store', [App\Http\Controllers\admin\InscripcionControl
 
 
 Route::get('/cargadocumentos', [App\Http\Controllers\admin\cargadocumentoController::class, 'index'])->name('cargadocumentos.index');
-Route::post('/cargadocumentos/store', [App\Http\Controllers\admin\cargadocumentoController::class, 'store'])->name('cargadocumentos.store');
+Route::post('/cargadocumentos/valida/form', [App\Http\Controllers\admin\cargadocumentoController::class, 'typeForm'])->name('cargadocumentos.valida.form');
+Route::post('/cargadocumentos/store/new', [App\Http\Controllers\admin\cargadocumentoController::class, 'storeNew'])->name('cargadocumentos.store.new');
+Route::post('/cargadocumentos/store/homologation', [App\Http\Controllers\admin\cargadocumentoController::class, 'storeHomolog'])->name('cargadocumentos.store.homologation');
 Route::get('storage/app/aunar/Documents/{id}/{archivo}', function ($id, $archivo) {
     
     $file = 'Documents/' . $id . '/' . $archivo;

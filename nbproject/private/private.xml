@@ -5,6 +5,7 @@
         <group>
             <file>file:/C:/xampp/htdocs/Campus/resources/views/admin/cargadedocumentos/cargadocumentos.blade.php</file>
             <file>file:/C:/xampp/htdocs/Campus/routes/web.php</file>
+            <file>file:/C:/xampp/htdocs/Campus/app/Helpers/Helper.php</file>
             <file>file:/C:/xampp/htdocs/Campus/resources/lang/es/documentos.php</file>
             <file>file:/C:/xampp/htdocs/Campus/app/Helpers/ActionValidate.php</file>
             <file>file:/C:/xampp/htdocs/Campus/app/Http/Controllers/admin/cargadocumentoController.php</file>

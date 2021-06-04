@@ -18,7 +18,8 @@ class cargadocumentoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('admin.cargadedocumentos.cargadocumentos');
+        $typeForm = '1';
+        return view('admin.cargadedocumentos.cargadocumentos', compact('typeForm'));
     }
 
     /**
@@ -36,7 +37,14 @@ class cargadocumentoController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function storeNew(Request $request) {
+        
+        $as = Helper::uploadFile($request->file('documentoidentificacion'), $request->user_id);
+        dd($as);
+        return $request;
+    }
+    
+    public function storeHomolog(Request $request) {
         $as = Helper::uploadFile($request->file('documentoidentificacion'), $request->user_id);
         dd($as);
         return $request;
@@ -81,6 +89,19 @@ class cargadocumentoController extends Controller {
      */
     public function destroy($id) {
         //
+    }
+
+    public function typeForm(Request $request) {
+        switch ($request->Tipo_de_Solicitud_Selecion) {
+            case 1:
+                $typeForm = '1';
+                break;
+            case 2:
+                $typeForm = '2';
+                break;
+        }
+
+        return view('admin.cargadedocumentos.cargadocumentos', compact('typeForm'));
     }
 
 }

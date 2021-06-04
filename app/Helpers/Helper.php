@@ -20,14 +20,12 @@ class Helper {
 
     public static function uploadFile($fileInput, $id_user) {
         $nameFile = str_replace(' ', '_', $fileInput->getClientOriginalName());
-//        dd($nameFile);
-//        dd($fileInput);
         $ruteFile = 'Documents/' . $id_user . '/' . $nameFile;
         Storage::disk('aunar')->put($ruteFile, \File::get($fileInput));
 
         $file = "/storage/app/aunar/{$ruteFile}";
 //        $url = Storage::disk('aunar')->url("app/aunar/{$ruteFile}");
-        $url = Request::root() . $file;
+        $url = /*Request::root() .*/ $file;
 //        return response()->download($file);
         return $url;
     }
