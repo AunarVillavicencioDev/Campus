@@ -52,8 +52,8 @@ Route::get('storage/app/aunar/Documents/{id}/{archivo}', function ($id, $archivo
 Route::get('/pagos', [App\Http\Controllers\admin\pagoController::class, 'index'])->name('pagos.index');
 Route::get('/modal', [App\Http\Controllers\admin\pagoController::class, 'modal'])->name('factura.index');
 Route::get('/listadogeneral', [App\Http\Controllers\admin\ListadogeneralController::class, 'index'])->name('listadogeneral.index');
-Route::get('/gestionhojadevida', [App\Http\Controllers\admin\HojadevidaController::class, 'index'])->name('hojadevida.index');
-Route::get('/gestionoportunidad', [App\Http\Controllers\admin\OportunidadController::class, 'index'])->name('oportunidad.index');
+Route::get('/hojadevida', [App\Http\Controllers\admin\HojadevidaController::class, 'index'])->name('hojadevida.index');
+Route::get('/oportunidad', [App\Http\Controllers\admin\OportunidadController::class, 'index'])->name('oportunidad.index');
 
 
 
