@@ -15,6 +15,7 @@ class Documentos_user extends Model
      * @var array
      */
     protected $fillable = [
+        'id',
         'user_id',
         'tipo_form',
         'descripcion',
@@ -33,5 +34,6 @@ class Documentos_user extends Model
         'certificado_notas',
         'contenidos_tematicos',
         'carnet_vacunas',
+        'actualizacion_activa',
     ];
 }

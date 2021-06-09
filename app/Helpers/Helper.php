@@ -29,5 +29,5 @@ class Helper {
 //        return response()->download($file);
         return $url;
     }
-
+   
 }

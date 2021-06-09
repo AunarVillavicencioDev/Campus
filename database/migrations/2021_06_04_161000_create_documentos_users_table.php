@@ -16,7 +16,7 @@ class CreateDocumentosUsersTable extends Migration {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('tipo_form');
-            $table->string('descripcion');
+            $table->string('descripcion')->nullable();
             $table->string('copia_de_cedula');
             $table->string('certificado_eps');
             $table->string('registro_civil');
@@ -28,10 +28,11 @@ class CreateDocumentosUsersTable extends Migration {
             $table->string('examen_medico');
             $table->string('examen_serologia');
             $table->string('soporte_pago');
-            $table->string('resolucion_acta_homologacion');
-            $table->string('certificado_notas');
-            $table->string('contenidos_tematicos');
-            $table->string('carnet_vacunas');
+            $table->string('resolucion_acta_homologacion')->nullable();
+            $table->string('certificado_notas')->nullable();
+            $table->string('contenidos_tematicos')->nullable();
+            $table->string('carnet_vacunas')->nullable();
+            $table->string('actualizacion_activa');
             $table->timestamps();
         });
     }

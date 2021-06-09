@@ -39,18 +39,35 @@
                     </div>   
                 </div>
                 <hr/>
+                <div class="alert alert-border alert-border-warning alert-dismissible fade show" role="alert">
 
+                    <p>
+                        <i class="uil uil-exclamation-triangle font-size-16 text-warning me-2"></i> Recuerde revisar muy bien antes de enviar la información, ya que tendrá que cargar los archivos de nuevo
+                    </p> 
+                    <p>
+                        si no cumple con las características de los archivos.
+                    </p>
+                    <p>
+                        - El peso máximo para los archivos es de 20MG.
+                    </p>
+                    <p>
+                        - Recuerde que el formato de los archivos es PDF.
+                    </p>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+                    </button>
+                </div>
                 <div class="row">
                     <div class="col-lg-6">
-
-                        {!! Form::label('Copia_de_Cedula_Al_150', __('documentos.copia_de_cedula'));!!}
-                        {!! Form::file('Copia_de_Cedula_Al_150', ['class' => 'form-control']); !!}
+                        {{old('Copia_de_Cedula_Al_150')}}
+                        {!! Form::label('copia_de_cedula_al_150', __('documentos.copia_de_cedula'));!!}
+                        {!! Form::file('copia_de_cedula_al_150', ['class' => 'form-control']); !!}
 
                     </div>   
                     <div class="col-lg-6">
 
-                        {!! Form::label('certificado_de_afiliación_a_su_eps', __('documentos.certificado_eps'));!!}
-                        {!! Form::file('certificado_de_afiliación_a_su_eps', ['class' => 'form-control']); !!}
+                        {!! Form::label('certificado_de_afiliacion_a_su_eps', __('documentos.certificado_eps'));!!}
+                        {!! Form::file('certificado_de_afiliacion_a_su_eps', ['class' => 'form-control']); !!}
 
                     </div> 
                 </div>
@@ -88,8 +105,8 @@
                 <div class="row">
                     <div class="col-lg-6">
 
-                        {!! Form::label('Ficha_de_Inscripción_Entregada_Por_Asesor', __('documentos.ficha_inscripcion'));!!}
-                        {!! Form::file('Ficha_de_Inscripción_Entregada_Por_Asesor', ['class' => 'form-control']); !!}
+                        {!! Form::label('ficha_de_inscripcion_entregada_por_asesor', __('documentos.ficha_inscripcion'));!!}
+                        {!! Form::file('ficha_de_inscripcion_entregada_por_asesor', ['class' => 'form-control']); !!}
 
                     </div>   
                     <div class="col-lg-6">
@@ -103,14 +120,14 @@
                 <div class="row">
                     <div class="col-lg-6">
 
-                        {!! Form::label('Examen_Medico_General ', __('documentos.examen_medico'));!!}
-                        {!! Form::file('Examen_Medico_General', ['class' => 'form-control']); !!}
+                        {!! Form::label('examen_medico_general ', __('documentos.examen_medico'));!!}
+                        {!! Form::file('examen_medico_general', ['class' => 'form-control']); !!}
 
                     </div>   
                     <div class="col-lg-6">
 
-                        {!! Form::label('examen_de_serología', __('documentos.examen_serologia'));!!}
-                        {!! Form::file('examen_de_serología', ['class' => 'form-control']); !!}
+                        {!! Form::label('examen_de_serologia', __('documentos.examen_serologia'));!!}
+                        {!! Form::file('examen_de_serologia', ['class' => 'form-control']); !!}
 
                     </div>
                 </div>
@@ -161,6 +178,13 @@
                 @endvaliProgram104600
                 &nbsp
                 <br>
+                <div class="alert alert-border alert-border-danger alert-dismissible fade show" role="alert">
+                    <i class="uil uil-exclamation-octagon font-size-16 text-danger me-2"></i>
+                    Recuerde que el formato de los archivos es PDF. El peso máximo para los archivos es de 20MG.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+                    </button>
+                </div>
                 <div class="row">
                     <div class="col-lg-12 mt-4 d-grid gap-1">
                         {{ Form::button('<i class="fas fa-cloud-upload-alt"></i>  Cargar', ['type' => 'submit', 'class' => 'btn btn-primary btn-lg btn-block waves-effect waves-light mb-2'] )  }}
