@@ -55,7 +55,7 @@ Route::get('/listadogeneral', [App\Http\Controllers\admin\ListadogeneralControll
 Route::get('/gestionhojadevida', [App\Http\Controllers\admin\HojadevidaController::class, 'index'])->name('hojadevida.index');
 
 Route::get('/gestionoportunidad', [App\Http\Controllers\admin\OportunidadController::class, 'index'])->name('oportunidad.index');
-Route::get('/oportunidad', [App\Http\Controllers\admin\OportunidadController::class, 'modal'])->name('oportunidad.index');
+Route::get('/oporunidad', [App\Http\Controllers\admin\OportunidadController::class, 'modal'])->name('oportunidad.index');
 
 
 

@@ -1,4 +1,6 @@
-
+@extends('layouts.master-without-nav')
+@section('title') @lang('translation.Dashboard') @endsection
+@section('content')
 <head>
 <link href= "http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.css"    rel="stylesheet" type="text/css">
 <link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
@@ -253,3 +255,10 @@ table, td, th {
 
 
 
+@endsection
+@section('script')
+       <!-- apexcharts -->
+       <script src="{{ URL::asset('/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+
+       <script src="{{ URL::asset('/assets/js/pages/dashboard.init.js') }}"></script>
+@endsection
