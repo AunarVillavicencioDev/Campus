@@ -2,6 +2,9 @@
 @section('title') @lang('translation.Dashboard') @endsection
 @section('css')
 <link href="http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.css" rel="stylesheet" type="text/css">
+<link href="/assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css">
+<link href="http://minible-v-light.laravel.themesbrand.com/assets/css/icons.min.css" id="icons-style" rel="stylesheet" type="text/css">
+<link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
 <style>
  #ocultar1{visibility:hidden;}
  #ocultar2{visibility:hidden;}
@@ -61,22 +64,22 @@
                                 <td class="dtr-control sorting_1" tabindex="0">01</td>
                                 <td>Giacomo Guillizi Founder & CEO</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr><tr class="even">
                                 <td class="sorting_1 dtr-control">02</td>
                                 <td>Marco Botton Tuttofare</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr><tr class="odd">
                                 <td class="sorting_1 dtr-control">03</td>
                                 <td>Mariah Maclac Better Half</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr><tr class="even">
                                 <td class="sorting_1 dtr-control">04</td>
                                 <td>Valerie Liberty Head chef</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr></tbody>
 
                     </table></div></div><div class="row"  id="ocultar2">

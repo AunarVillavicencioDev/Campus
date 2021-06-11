@@ -61,22 +61,22 @@
                                 <td class="dtr-control sorting_1" tabindex="0">01</td>
                                 <td>Giacomo Guillizi Founder & CEO</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr><tr class="even">
                                 <td class="sorting_1 dtr-control">02</td>
                                 <td>Marco Botton Tuttofare</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr><tr class="odd">
                                 <td class="sorting_1 dtr-control">03</td>
                                 <td>Mariah Maclac Better Half</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr><tr class="even">
                                 <td class="sorting_1 dtr-control">04</td>
                                 <td>Valerie Liberty Head chef</td>
                                 <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Gestionar</td>
                             </tr></tbody>
 
                     </table></div></div><div class="row"  id="ocultar2">

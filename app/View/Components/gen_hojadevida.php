@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Modal extends Component
+class gen_hojadevida extends Component
 {
     /**
      * Create a new component instance.
@@ -19,10 +19,10 @@ class Modal extends Component
     /**
      * Get the view / contents that represent the component.
      *
-     * @return \Illuminate\View\View|string
+     * @return \Illuminate\Contracts\View\View|\Closure|string
      */
     public function render()
     {
-        return view('components.modal');
+        return view('components.gen_hojadevida');
     }
 }

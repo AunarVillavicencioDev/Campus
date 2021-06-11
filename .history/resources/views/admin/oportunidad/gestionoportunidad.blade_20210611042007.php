@@ -1,5 +1,7 @@
 @extends('layouts.master')
 @section('title') @lang('translation.Dashboard') @endsection
+
+
 @section('css')
 <link href="http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.css" rel="stylesheet" type="text/css">
 <style>
@@ -52,6 +54,10 @@
                             <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 148px;" aria-sort="ascending" aria-label="Id Oportunidad: activate to sort column descending">Id Oportunidad</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 226px;" aria-label="Nombre: activate to sort column ascending">Nombre</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 106px;" aria-label="Estado: activate to sort column ascending">Estado</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 35px;" aria-label="Ciudad: activate to sort column ascending">Ciudad</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 95px;" aria-label="Edad: activate to sort column ascending">Edad</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Colegio: activate to sort column ascending">Colegio</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Homologa: activate to sort column ascending">Homologa</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Gestionar: activate to sort column ascending">Gestionar</th></tr>
                         </thead>
 
@@ -60,23 +66,52 @@
                         <tr class="odd">
                                 <td class="dtr-control sorting_1" tabindex="0">01</td>
                                 <td>Giacomo Guillizi Founder & CEO</td>
-                                <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Oportunidad</td>
+                                <td>Acacias</td>
+                                <td>40</td>
+                                <td></td>
+                                <td> 
+                                    <div class="custom-control custom-checkbox">
+                                     <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                     <label class="custom-control-label" for="customCheck1"></label>
+                                     </div></td>
+                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genoportunidad-xl">Gestionar</a></td>
                             </tr><tr class="even">
                                 <td class="sorting_1 dtr-control">02</td>
                                 <td>Marco Botton Tuttofare</td>
-                                <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Proceso matricula</td>
+                                <td>Guamal</td>
+                                <td>38</td>
+                                <td></td>
+                                <td><div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2" checked>
+                                     <label class="custom-control-label" for="customCheck2"></label>
+                                     </div></td>
+                                     <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genoportunidad-xl">Gestionar</a></td>
                             </tr><tr class="odd">
                                 <td class="sorting_1 dtr-control">03</td>
                                 <td>Mariah Maclac Better Half</td>
-                                <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Aspirante</td>
+                                <td>Restrepo</td>
+                                <td>41</td>
+                                <td></td>
+                                <td><div class="custom-control custom-checkbox">
+                                     <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                     <label class="custom-control-label" for="customCheck3"></label>
+                                     </div></td>
+                                     <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genoportunidad-xl">Gestionar</a></td>
                             </tr><tr class="even">
                                 <td class="sorting_1 dtr-control">04</td>
                                 <td>Valerie Liberty Head chef</td>
-                                <td>OK</td>
-                                <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl">Gestionar</a></td>
+                                <td>Prospecto</td>
+                                <td>Villavicencio</td>
+                                <td>20</td>
+                                <td></td>
+                                <td><div class="custom-control custom-checkbox">
+                                     <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                     <label class="custom-control-label" for="customCheck4"></label>
+                                     </div></td>
+                                     <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genoportunidad-xl">Gestionar</a></td>
                             </tr></tbody>
 
                     </table></div></div><div class="row"  id="ocultar2">
@@ -90,15 +125,12 @@
             </div>
         </div> <!-- end col -->
     </div>
-@component('common-components.modal.gen_hojadevida')
+@component('common-components.modal.gen_oportunidad')
+    @slot('id_oportunidad') 999999 @endslot 
     @slot('nombre') Giacomo Guillizoni @endslot
-    @slot('edad') 3 @endslot
-    @slot('direcciondomicilio') Calle marte junto a pluton @endslot
-    @slot('barrio') Jordan @endslot
-    @slot('departamento') Meta @endslot
-    @slot('municipio') Villavicencio @endslot
-    @slot('celular') 100 000 0000 @endslot
-    @slot('telefono') 036 1234567 @endslot
+    @slot('telefono') 300 000 0000 @endslot
+    @slot('programa') diseño visual @endslot
+    @slot('jornada') Diurna @endslot
 @endcomponent
    
 
@@ -106,6 +138,8 @@
 @section('script')
      <script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.js"></script>
     <script src="http://minible-v-light.laravel.themesbrand.com/assets/js/pages/datatables.init.js"></script>
+
  <script src="http://minible-v-light.laravel.themesbrand.com/assets/js/app.min.js"></script>
+
 @endsection
       
