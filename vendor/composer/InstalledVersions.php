@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '15c5853cbbc88b2bfbd2e9ef55a0ec951fe3dd47',
+    'reference' => 'edaf9361986a6ded1558ade509445c32dde6f28b',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -66,6 +66,15 @@ private static $installed = array (
       array (
         0 => '*',
       ),
+    ),
+    'davejamesmiller/laravel-breadcrumbs' => 
+    array (
+      'pretty_version' => '5.3.2',
+      'version' => '5.3.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '99f92a706faefb5e1816caa96e877a0184509e5b',
     ),
     'doctrine/inflector' => 
     array (
@@ -460,7 +469,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '15c5853cbbc88b2bfbd2e9ef55a0ec951fe3dd47',
+      'reference' => 'edaf9361986a6ded1558ade509445c32dde6f28b',
     ),
     'laravel/sail' => 
     array (
