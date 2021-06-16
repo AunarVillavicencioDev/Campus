@@ -52,6 +52,12 @@ Route::get('storage/app/aunar/Documents/{id}/{archivo}', function ($id, $archivo
 Route::get('/pagos', [App\Http\Controllers\admin\pagoController::class, 'index'])->name('pagos.index');
 Route::get('/modal', [App\Http\Controllers\admin\pagoController::class, 'modal'])->name('factura.index');
 
+Route::get('/factura/pdf/stream/{user_id}', [App\Http\Controllers\admin\FacturaController::class, 'pdfStream'])->name('factura.pdfStream');
+Route::get('/factura/html/stream/{user_id}', [App\Http\Controllers\admin\FacturaController::class, 'htmlStream'])->name('factura.htmlStream');
+
+
+Route::get('/openpay', [App\Http\Controllers\OpenPayController::class, 'index'])->name('openpay.index<F');
+
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
     $exitCode = Artisan::call('db:seed --class=UserSeeder');

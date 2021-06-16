@@ -1,21 +1,36 @@
 @extends('layouts.master')
 @section('title') @lang('translation.Dashboard') @endsection
-<head>
-    <link href= "http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.css"    rel="stylesheet" type="text/css">
-    <link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
-    <style>
-        .col-sm-12.col-md-6,.col-sm-12.col-md-5,.col-sm-12.col-md-7 {
-            visibility: hidden;
-        }
-    </style>
-</head>
-
 @section('content')
 @component('common-components.breadcrumb')
 @slot('pagetitle') Pagos @endslot
 @slot('title') Pagos @endslot
 @endcomponent 
+@section('css') 
+<link href= "{{ URL::asset('/assets/libs/datatables/datatables.min.css') }}"    rel="stylesheet" type="text/css">
+<style>
 
+    .b1{
+        border-left-style: none;
+        text-align:right;
+        font-weight: bold;
+    }
+    .b2{
+        border-right-style: none;
+    }
+    .b3{
+        border-left-style: none;
+        text-align:right;
+    }
+    .b4{
+        border: 1px solid white;
+        text-align:right;
+    }
+    table, td, th {
+
+    }
+
+</style>
+@endsection
 
 
 
@@ -23,7 +38,7 @@
     <div class="card-body">
         <div class="row">
             <div class="col-12">
-                <button type="button" class="btn btn-primary btn-lg waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-modal-genFactura-xl">Generar Factura</button>
+                <button type="button" class="btn btn-primary btn-lg waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".bs-modal-genFactura">Generar Factura</button>
             </div>
         </div>
 
@@ -93,4 +108,5 @@
 <script src="{{ URL::asset('/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
 <script src="{{ URL::asset('/assets/js/pages/dashboard.init.js') }}"></script>
+
 @endsection

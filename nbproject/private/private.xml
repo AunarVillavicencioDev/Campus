@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/Campus/resources/views/admin/cargadedocumentos/cargadocumentos.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/resources/views/admin/pagos/pagos.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/routes/web.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/resources/lang/es/documentos.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/app/Helpers/ActionValidate.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/resources/views/common-components/modal/pagos/genFactura.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/resources/views/admin/pagos/factura.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/app/Http/Controllers/admin/cargadocumentoController.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/app/Http/Requests/DocumentsCreateNewRequest.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

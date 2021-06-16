@@ -95,7 +95,6 @@
 
                     </div>   
                     <div class="col-lg-6">
-
                         {!! Form::label('resultados_de_prueba_saber', __('documentos.resultados_saber'));!!}
                         {!! Form::file('resultados_de_prueba_saber', ['class' => 'form-control']); !!}
 

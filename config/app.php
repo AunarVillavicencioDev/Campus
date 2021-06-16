@@ -152,7 +152,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\FormServiceProvider::class,
-        Laraveles\Spanish\SpanishServiceProvider::class,
+        Laraveles\Spanish\SpanishServiceProvider ::class,
     ],
     /*
       |--------------------------------------------------------------------------
@@ -208,5 +208,6 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'ActionValidate' => App\Helpers\ActionValidate::class,
         'Helper' => App\Helpers\Helper::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 ];
