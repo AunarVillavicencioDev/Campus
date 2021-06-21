@@ -70,5 +70,7 @@ tr:nth-child(even) {
     <td>Italy</td>
   </tr>
 </table>
+
+<img src="data:image/png;base64,{{$code}}" />
 @endsection
 

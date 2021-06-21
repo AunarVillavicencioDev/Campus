@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f21ff6710705b9a22ed47c29f75423c6",
+    "content-hash": "dc7e075da80f89aebf34b3486ee81e83",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -491,6 +491,58 @@
                 }
             ],
             "time": "2020-11-24T19:55:57+00:00"
+        },
+        {
+            "name": "ecommpay/barcode",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ITECOMMPAY/barcode-generator.git",
+                "reference": "69a389d404d75e200d83c3bc5814c1e592fe27b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ITECOMMPAY/barcode-generator/zipball/69a389d404d75e200d83c3bc5814c1e592fe27b0",
+                "reference": "69a389d404d75e200d83c3bc5814c1e592fe27b0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": "~7.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeItNow\\": "CodeItNow/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Akhtar Khan",
+                    "email": "er.akhtarkhan@gmail.com"
+                }
+            ],
+            "description": "Barcode & Qr Code generator library by http://www.codeitnow.in. You can use it with Custom PHP application or any PHP Framework such as Laravel, Cakephp, Yii, Codeigneter etc.",
+            "homepage": "http://www.codeitnow.in",
+            "keywords": [
+                "Symfony2",
+                "barcode",
+                "cakephp",
+                "code",
+                "generator",
+                "laravel",
+                "qr",
+                "qrcode",
+                "symfony"
+            ],
+            "support": {
+                "source": "https://github.com/ITECOMMPAY/barcode-generator/tree/v3.1.0"
+            },
+            "time": "2020-05-20T08:02:54+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -1925,16 +1977,16 @@
         },
         {
             "name": "openpay/sdk",
-            "version": "2.1.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/open-pay/openpay-php.git",
-                "reference": "75d791945a9a4fa3725223ca344f7f664bb55786"
+                "reference": "6919d5aabe1e3132e9797908b26c9f5bbc5f9fe4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/open-pay/openpay-php/zipball/75d791945a9a4fa3725223ca344f7f664bb55786",
-                "reference": "75d791945a9a4fa3725223ca344f7f664bb55786",
+                "url": "https://api.github.com/repos/open-pay/openpay-php/zipball/6919d5aabe1e3132e9797908b26c9f5bbc5f9fe4",
+                "reference": "6919d5aabe1e3132e9797908b26c9f5bbc5f9fe4",
                 "shasum": ""
             },
             "require": {
@@ -1945,6 +1997,7 @@
             "require-dev": {
                 "phpunit/phpunit": "4.8.*"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-0": {
@@ -1970,9 +2023,9 @@
             "description": "This is a client implementing the payment services for Openpay at openpay.mx",
             "support": {
                 "issues": "https://github.com/open-pay/openpay-php/issues",
-                "source": "https://github.com/open-pay/openpay-php/tree/2.1.1"
+                "source": "https://github.com/open-pay/openpay-php/tree/master"
             },
-            "time": "2020-12-02T00:42:37+00:00"
+            "time": "2020-12-03T01:35:14+00:00"
         },
         {
             "name": "opis/closure",
@@ -7931,7 +7984,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "openpay/sdk": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'fd0086d5545bb2a15c03185cf26bf3f094d9f993',
+    'reference' => 'e114ae918933e06a81fa33d6986f42abde393c4d',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -120,6 +120,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '7a8c6e56ab3ffcc538d05e8155bb42269abf1a0c',
+    ),
+    'ecommpay/barcode' => 
+    array (
+      'pretty_version' => '3.1.0',
+      'version' => '3.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '69a389d404d75e200d83c3bc5814c1e592fe27b0',
     ),
     'egulias/email-validator' => 
     array (
@@ -478,7 +487,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'fd0086d5545bb2a15c03185cf26bf3f094d9f993',
+      'reference' => 'e114ae918933e06a81fa33d6986f42abde393c4d',
     ),
     'laravel/sail' => 
     array (
@@ -619,12 +628,13 @@ private static $installed = array (
     ),
     'openpay/sdk' => 
     array (
-      'pretty_version' => '2.1.1',
-      'version' => '2.1.1.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
+        0 => '9999999-dev',
       ),
-      'reference' => '75d791945a9a4fa3725223ca344f7f664bb55786',
+      'reference' => '6919d5aabe1e3132e9797908b26c9f5bbc5f9fe4',
     ),
     'opis/closure' => 
     array (

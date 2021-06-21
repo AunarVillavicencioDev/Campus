@@ -56,7 +56,8 @@ Route::get('/factura/pdf/stream/{user_id}', [App\Http\Controllers\admin\FacturaC
 Route::get('/factura/html/stream/{user_id}', [App\Http\Controllers\admin\FacturaController::class, 'htmlStream'])->name('factura.htmlStream');
 
 
-Route::get('/openpay', [App\Http\Controllers\OpenPayController::class, 'index'])->name('openpay.index<F');
+Route::get('/openpay', [App\Http\Controllers\OpenPayController::class, 'index'])->name('openpay.index');
+Route::post('/openpay/pay', [App\Http\Controllers\OpenPayController::class, 'store'])->name('openpay.store');
 
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
