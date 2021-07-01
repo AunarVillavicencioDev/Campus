@@ -52,6 +52,10 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'h' => 
+        array (
+            'h4cc\\WKHTMLToPDF\\' => 17,
+        ),
         'W' => 
         array (
             'Whoops\\' => 7,
@@ -200,6 +204,10 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'h4cc\\WKHTMLToPDF\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/h4cc/wkhtmltopdf-amd64',
         ),
         'Whoops\\' => 
         array (
@@ -5540,6 +5548,7 @@ class ComposerStaticInitc8a205f9bf69e312b721f6f57c6bdbbd
         'Whoops\\Util\\Misc' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/Misc.php',
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
+        'h4cc\\WKHTMLToPDF\\WKHTMLToPDF' => __DIR__ . '/..' . '/h4cc/wkhtmltopdf-amd64/WKHTMLToPDF.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

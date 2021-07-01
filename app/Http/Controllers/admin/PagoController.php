@@ -4,27 +4,34 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use CodeItNow\BarcodeBundle\Utils\BarcodeGenerator;
+use App\Models\User;
+use App\Models\Inscription;
+use App\Models\Liquidation;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Price;
 
-class PagoController extends Controller
-{
+class PagoController extends Controller {
 
     public function __construct() {
         $this->middleware('auth');
     }
-
 
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
+        $user_id = Auth::id();
         return view('admin.pagos.pagos');
     }
-    public function modal()
-    {
-        return view('admin.pagos.factura');
+
+    public function indexTarjetas() {
+        $user = Auth::user();
+        $inscripcion = Inscription::where('user_id', $user->id)->first();
+        $liquidacion = Liquidation::where('user_id', $user->id)->where('period', $inscripcion->periodo_academico)->first();
+        return view('admin.pagos.tarjetas', compact('user', 'liquidacion'));
     }
 
     /**
@@ -32,8 +39,7 @@ class PagoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create() {
         //
     }
 
@@ -43,8 +49,7 @@ class PagoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
     }
 
@@ -54,8 +59,7 @@ class PagoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         //
     }
 
@@ -65,8 +69,7 @@ class PagoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -77,8 +80,7 @@ class PagoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -88,8 +90,8 @@ class PagoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }

@@ -94,6 +94,10 @@
 
 
 @component('common-components.modal.pagos.genFactura') 
+@slot('conten')
+<iframe id="iframeLiquidacion" src="{{route('factura.htmlStream', ['user_id' =>Auth::id()])}}" style="width: 100%; height: 82vh;" ></iframe>
+@endslot
+
 @endcomponent
 @endsection
 @section('script')

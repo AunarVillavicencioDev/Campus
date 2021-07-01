@@ -25,9 +25,15 @@ class Helper {
 
         $file = "/storage/app/aunar/{$ruteFile}";
 //        $url = Storage::disk('aunar')->url("app/aunar/{$ruteFile}");
-        $url = /*Request::root() .*/ $file;
+        $url = /* Request::root() . */ $file;
 //        return response()->download($file);
         return $url;
     }
-   
+
+    public static function setNameProgramById($program_id) {
+        $program = Program::where('id', $program_id)->first();
+//        dd($program->Nombre);
+        return $program->Nombre;
+    }
+
 }

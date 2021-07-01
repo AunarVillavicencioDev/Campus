@@ -50,11 +50,9 @@ Route::get('storage/app/aunar/Documents/{id}/{archivo}', function ($id, $archivo
 });
 
 Route::get('/pagos', [App\Http\Controllers\admin\pagoController::class, 'index'])->name('pagos.index');
-Route::get('/modal', [App\Http\Controllers\admin\pagoController::class, 'modal'])->name('factura.index');
+Route::get('/pagos/tarjetas', [App\Http\Controllers\admin\pagoController::class, 'indexTarjetas'])->name('pagos.cards');
 
-Route::get('/factura/pdf/stream/{user_id}', [App\Http\Controllers\admin\FacturaController::class, 'pdfStream'])->name('factura.pdfStream');
 Route::get('/factura/html/stream/{user_id}', [App\Http\Controllers\admin\FacturaController::class, 'htmlStream'])->name('factura.htmlStream');
-
 
 Route::get('/openpay', [App\Http\Controllers\OpenPayController::class, 'index'])->name('openpay.index');
 Route::post('/openpay/pay', [App\Http\Controllers\OpenPayController::class, 'store'])->name('openpay.store');
@@ -67,6 +65,7 @@ Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('db:seed --class=InscriptionSeeder');
     $exitCode = Artisan::call('db:seed --class=CountrySeeder');
     $exitCode = Artisan::call('db:seed --class=AlertSeeder');
+    $exitCode = Artisan::call('db:seed --class=PriceSeeder');
 
     return 'refresh db Ok';
 });

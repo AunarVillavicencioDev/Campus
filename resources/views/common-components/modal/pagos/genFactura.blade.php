@@ -5,28 +5,45 @@
  * and open the template in the editor.
  */
 ?>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> 
+
+
 <div id="modalGenFactura" class="modal fade bs-modal-genFactura show" tabindex="-1" aria-labelledby="#modalGenFacturaLabel" style="display: none; padding-right: 16px;" aria-modal="true" role="dialog">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title mt-0" id="modalGenFacturaLabel">Fullscreen Modal Heading</h5>
+            <div class="modal-header header-modal-pagos">
+                <h5 class="modal-title mt-0" id="modalGenFacturaLabel">Liquidacion de pago</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <div id='viewer' style='width: 1024px; height: 600px; margin: 0 auto;'>
-                    
+            <div class="delit-padin-body-modal">
+                <div id='viewer'>
+                    <div class="row row-bts-pagos justify-content-center">
+                        <div class="col-4 text-center">
+                            <a class="btn btn-outline-info waves-effect waves-light" id="bt-imprimir" onclick="printDiv()" data-bs-dismiss="modal">Imprimir</a> 
+                        </div>
+                        <div class="col-4 text-center">
+                            <a class="btn btn-outline-success waves-effect waves-light" href="{{route('pagos.cards')}}">Pagar online con tarjeta</a>
+                        </div>
+                        <div class="col-4 text-center">
+                            <button type="button" class="btn btn-outline-danger waves-effect waves-light" data-bs-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                    <div id="imprimir">
+                        {{ $conten }}
+                    </div>
                 </div>
-
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary waves-effect waves-light">Save changes</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div>
 <script>
+
+    function printDiv()
+    {
+        $('#iframeLiquidacion').get(0).contentWindow.focus(); 
+          //Ejecutamos la impresion sobre ese control
+          $("#iframeLiquidacion").get(0).contentWindow.print(); 
+    }
     WebViewer({
         path: '/assets/libs/pdfJsExpress/lib', // path to the PDF.js Express'lib' folder on your server
         initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/webviewer-demo.pdf',

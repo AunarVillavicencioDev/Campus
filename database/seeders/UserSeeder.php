@@ -24,6 +24,7 @@ class UserSeeder extends Seeder {
             'movil' => '3121234567',
             'aceptar_terminos' => 'Acepto',
             'created_at' => now(),
+            'profile' =>'1',
         ]);
     }
 

@@ -32,7 +32,7 @@ class InscriptionSeeder extends Seeder {
             'genero' => 'Hombre',
             'libreta_militar' => '1234567890',
             'estrato' => '3',
-            'direcion_recidencia' => 'calle simbre viva',
+            'direcion_recidencia' => 'calle simpre viva',
             'municipio_recidencia' => 'Villavicnecio',
             'deparatamento_recidencia' => 'Meta',
             'pais_recidencia' => 'Colombia',

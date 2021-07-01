@@ -18,8 +18,8 @@ class CreateLiquidationsTable extends Migration {
             $table->unsignedBigInteger('inscription_id');
             $table->string('value');
             $table->date('dateValue');
+            $table->string('period');
             $table->date('dateExpiration');
-            $table->string('value');
             $table->timestamps();
         });
     }

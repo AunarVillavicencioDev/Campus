@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'e114ae918933e06a81fa33d6986f42abde393c4d',
+    'reference' => '05b5c9997a19c00922f60d872c40dca2b3d0fe19',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -213,6 +213,24 @@
       array (
       ),
       'reference' => 'dc960a912984efb74d0a90222870c72c87f10c91',
+    ),
+    'h4cc/wkhtmltopdf-amd64' => 
+    array (
+      'pretty_version' => '0.12.4',
+      'version' => '0.12.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4e2ab2d032a5d7fbe2a741de8b10b8989523c95b',
+    ),
+    'h4cc/wkhtmltopdf-i386' => 
+    array (
+      'pretty_version' => '0.12.4',
+      'version' => '0.12.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'da14486ec8eba1873b026b56126ed02d2f2ae5e3',
     ),
     'hamcrest/hamcrest-php' => 
     array (
@@ -463,7 +481,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'e114ae918933e06a81fa33d6986f42abde393c4d',
+      'reference' => '05b5c9997a19c00922f60d872c40dca2b3d0fe19',
     ),
     'laravel/sail' => 
     array (

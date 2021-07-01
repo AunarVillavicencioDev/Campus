@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div class="home-btn d-none d-sm-block">
-        <a href="{{ url('index') }}" class="text-dark"><i class="mdi mdi-home-variant h2"></i></a>
+        <a href="{{ Route('login') }}" class="text-dark"><i class="mdi mdi-home-variant h2"></i></a>
     </div>
     <div class="account-pages my-5 pt-sm-5">
         <div class="container">
@@ -102,7 +102,7 @@
                                     </div>
 
                                     <div class="mt-4 text-center">
-                                        <p class="mb-0">Don't have an account ? <a href="{{ url('register') }}"
+                                        <p class="mb-0">Don't have an account ? <a href="{{ url('register') }}?type=1"
                                                 class="fw-medium text-primary"> Signup now </a> </p>
                                     </div>
                                 </form>
