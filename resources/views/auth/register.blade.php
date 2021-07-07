@@ -33,7 +33,7 @@ Register
                         <div class="p-2 mt-4">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
-                                <input type="hidden" name="profile" id="profile" value="{{ Request::get('type') }}">
+                                <input type="hidden" name="profile" id="profile" value="1">
                                 <div class="mb-3">
                                     <label class="form-label" for="email">Correo</label>
                                     <input type="email" class="form-control @error('email') is-invalid @enderror"

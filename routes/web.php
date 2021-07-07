@@ -66,6 +66,7 @@ Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('db:seed --class=CountrySeeder');
     $exitCode = Artisan::call('db:seed --class=AlertSeeder');
     $exitCode = Artisan::call('db:seed --class=PriceSeeder');
+    $exitCode = Artisan::call('db:seed --class=PagoSeeder');
 
     return 'refresh db Ok';
 });

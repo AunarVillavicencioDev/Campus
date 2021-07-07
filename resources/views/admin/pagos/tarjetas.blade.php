@@ -125,7 +125,9 @@
                                         </div>
                                         <div class="row align-items-start justify-content-start">
                                             <div class="col-12">
-                                                <input type="text" autocomplete="off" data-openpay-card="card_number" value="378282246310005">
+                                                <input type="text" autocomplete="off" data-openpay-card="card_number" value="4111111111111111">
+                                                <!--4111111111111111-->
+                                                <!--36728481533333-->
                                             </div>
                                         </div>
                                     </div>
@@ -138,9 +140,13 @@
                                         <div class="row align-items-start justify-content-start"> 
                                             <div class="col-4"> 
                                                 <input type="text" placeholder="Mes" data-openpay-card="expiration_month" value="12">
+                                                <!--12-->
+                                                <!--07-->
                                             </div>  
                                             <div class="col-4"> 
                                                 <input type="text" placeholder="Año" data-openpay-card="expiration_year" value="22">
+                                                <!--22-->
+                                                <!--29-->
                                             </div> 
                                         </div>       
                                     </div>
@@ -152,7 +158,7 @@
                                         </div>
                                         <div class="row align-items-center justify-content-start">
                                             <div class="col-6"> 
-                                                <input type="text" placeholder="3 dígitos" autocomplete="off" data-openpay-card="cvv2" value="110">
+                                                <input type="password" placeholder="3 dígitos" autocomplete="off" data-openpay-card="cvv2" value="651">
                                             </div>
                                             <div class="col-6">
                                                 <img  width="156" src="{{ URL::asset('/images/pasarela/tarjetas.png') }}"> 
@@ -186,7 +192,7 @@
                                 </div>
                                 <div class="row align-items-start justify-content-start contenido">
 
-                                    <a  href="#" id="pay-button"><button id="botonsito" type="button" class="btn btn-danger">Pagar </button></a>                                   
+                                    <a  href="#" id="pay-button"><button id="botonsito" type="button" class="btn btn-danger" disabled="true">Pagar </button></a>                                   
                                 </div>  
                             </div>       
                         </div>
@@ -208,9 +214,8 @@ $(document).ready(function () {
     OpenPay.setApiKey('pk_33b5392fe3cd49839c95288d66cc7a77');
     OpenPay.setSandboxMode(true);
     var deviceSessionId = OpenPay.deviceData.setup("payment-form", "deviceIdHiddenFieldName");
-});
-
-$('#pay-button').on('click', function (event) {
+    $("#botonsito").prop("disabled", false);
+    $('#pay-button').on('click', function (event) {
     event.preventDefault();
     $("#pay-button").prop("disabled", true);
     var success_callbak = function (response) {
@@ -225,6 +230,8 @@ $('#pay-button').on('click', function (event) {
         $("#pay-button").prop("disabled", false);
     };
     OpenPay.token.extractFormAndCreate($('#payment-form'), success_callbak, error_callbak);
+});
+    
 });
 
 </script>

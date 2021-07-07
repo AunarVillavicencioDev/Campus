@@ -10,6 +10,7 @@ use App\Models\Inscription;
 use App\Models\Liquidation;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Price;
+use App\Models\Pago;
 
 class PagoController extends Controller {
 
@@ -24,13 +25,16 @@ class PagoController extends Controller {
      */
     public function index() {
         $user_id = Auth::id();
-        return view('admin.pagos.pagos');
+        $pagos = Pago::where('id', $user_id)->get();
+        return view('admin.pagos.pagos', compact('pagos'));
     }
 
     public function indexTarjetas() {
         $user = Auth::user();
         $inscripcion = Inscription::where('user_id', $user->id)->first();
         $liquidacion = Liquidation::where('user_id', $user->id)->where('period', $inscripcion->periodo_academico)->first();
+        $pagos = Pago::where('id', $user->id)->get();
+
         return view('admin.pagos.tarjetas', compact('user', 'liquidacion'));
     }
 

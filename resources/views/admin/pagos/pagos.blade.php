@@ -56,31 +56,16 @@
                                     <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 26px;" aria-label="Age: activate to sort column ascending">realizar Pago</th>
                                 </tr>
                             </thead>
-                            <tbody>     
-                                <tr class="odd">
-                                    <td  tabindex="0">Inscripción</td>
-                                    <td>01-03-2021</td>
-                                    <td>Consuerte</td>
+                            <tbody> 
+                            @foreach($pagos as $items)
+                                <tr>
+                                    <td  tabindex="0">{{$items->description}}</td>
+                                    <td>{{$items->operation_date}}</td>
+                                    <td>{{$items->card_bank_name}}</td>
                                     <td><a href="#">link1</a></td>                                
                                 </tr>
-                                <tr class="even">
-                                    <td >Matricula</td>
-                                    <td>02-03-2021</td>
-                                    <td>Consuerte2</td>
-                                    <td><a href="#">link2</a></td>                                
-                                </tr>
-                                <tr class="odd">
-                                    <td  tabindex="0">Inscripción 2</td>
-                                    <td>03-03-2021</td>
-                                    <td>Consuerte3</td>
-                                    <td><a href="#">link3</a></td>                                
-                                </tr>
-                                <tr class="even">
-                                    <td >Matricula 2</td>
-                                    <td>04-03-2021</td>
-                                    <td>Consuerte4</td>
-                                    <td><a href="#">link4</a></td>                                
-                                </tr>
+                            @endforeach    
+                               
 
                             </tbody>
                         </table>
