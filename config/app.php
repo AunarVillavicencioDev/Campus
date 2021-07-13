@@ -208,6 +208,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'ActionValidate' => App\Helpers\ActionValidate::class,
         'Helper' => App\Helpers\Helper::class,
+        'Sed' => App\Helpers\Sed::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 ];

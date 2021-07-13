@@ -40,6 +40,8 @@
                         <span>@lang('translation.Dashboard')</span>
                     </a>
                 </li>
+                @valiTypeProfileEstudiante(Auth::user()->profile) 
+
                 @if(ActionValidate::valideUserInscripcion())
                 <li>
                     <a href="{{route('inscripcion.index')}}">
@@ -60,14 +62,25 @@
                         <span>@lang('pagos.name')</span>
                     </a>
                 </li>
-<!--                <li>
-                    <a href="{{route('inscripcion.index')}}">
-                        <i class="uil-user-circle"></i>
-                        <span>@lang('inscripcion.name')</span>
+                @endvaliTypeProfileEstudiante
+
+                @valiTypeProfileAdmisiones(Auth::user()->profile)
+                <li>
+                    <a href="{{route('listadogeneral.index')}}">
+                        <i class="uil-list-ul"></i>
+                        <span>@lang('listadoGeneral.name')</span>
                     </a>
-                </li>-->
-                
-                
+                </li>
+
+                @endvaliTypeProfileAdmisiones
+                <!--                <li>
+                                    <a href="{{route('inscripcion.index')}}">
+                                        <i class="uil-user-circle"></i>
+                                        <span>@lang('inscripcion.name')</span>
+                                    </a>
+                                </li>-->
+
+
 
             </ul>
         </div>

@@ -18,6 +18,7 @@ use App\Models\Liquidation;
 use App\Models\Program;
 use App\Models\Pago;
 use Carbon\Carbon;
+use App\Helpers\Sed;
 
 require_once '../vendor/autoload.php';
 
@@ -200,15 +201,14 @@ class OpenPayController extends Controller {
                 'email' => $request->email);
 
             // create object charge
-            $d = rand(1, 10000);
             $chargeRequest = array(
                 'method' => 'card',
                 'source_id' => $request->token_id,
-                'amount' => (int) $request->monto,
+                'amount' => (int) '100',
                 'currency' => 'COP',
                 "iva" => "0",
                 'description' => 'Pago Aunar Villavicencio ' . $program->Nombre,
-                'order_id' => 'AunarVill' . $liquidacion->id,
+                'order_id' => 'AunarVill103' . $liquidacion->id,
                 'device_session_id' => $request->deviceIdHiddenFieldName,
                 'customer' => $customer
             );
@@ -218,37 +218,37 @@ class OpenPayController extends Controller {
             $res = Pago::create([
                         'user_id' => $request->user_id,
                         'liquidacion_id' => $liquidacion->id,
-                        'transfer_id' => $charge->id,
+                        'transfer_id' => Sed::encryption($charge->id, $user->document),
                         'amount' => $charge2->serializableData['amount'],
-                        'authorization' => $charge2->authorization,
+                        'authorization' => Sed::encryption($charge2->authorization, $user->document),
                         'method' => $charge2->serializableData['method'],
                         'operation_type' => $charge2->operation_type,
                         'transaction_type' => $charge2->transaction_type,
-                        'card_type' => $charge2->card->type,
-                        'card_brand' => $charge2->card->brand,
-                        'card_holder_name' => $charge2->card->serializableData['holder_name'],
+                        'card_type' => Sed::encryption($charge2->card->type, $user->document),
+                        'card_brand' => Sed::encryption($charge2->card->brand, $user->document),
+                        'card_holder_name' => Sed::encryption($charge2->card->serializableData['holder_name'], $user->document),
                         'card_allows_charges' => $charge2->card->allows_charges,
                         'card_allows_payouts' => $charge2->card->allows_payouts,
-                        'card_bank_name' => $charge2->card->bank_name,
-                        'status' => $charge2->status,
-                        'currency' => $charge2->currency,
+                        'card_bank_name' => Sed::encryption($charge2->card->bank_name, $user->document),
+                        'status' => Sed::encryption($charge2->status, $user->document),
+                        'currency' => Sed::encryption($charge2->currency, $user->document),
                         'creation_date' => Carbon::parse($charge2->creation_date)->format('Y-m-d H:i:s'),
                         'operation_date' => Carbon::parse($charge2->serializableData['operation_date'])->format('Y-m-d H:i:s'),
                         'description' => $charge2->serializableData['description'],
                         'error_message' => $charge2->serializableData['error_message'],
-                        'order_id' => $charge2->serializableData['order_id'],
+                        'order_id' => Sed::encryption($charge2->serializableData['order_id'], $user->document),
             ]);
 
             $dataTrans = (object) array('pago' => $charge2->serializableData['amount'], 'id_trans' => $charge->id, 'datePay' => Carbon::parse($charge2->serializableData['operation_date'])->format('Y-m-d H:i:s'), 'descrip' => $charge2->serializableData['description'], 'order' => $charge2->serializableData['order_id']);
             if ($charge->id) {
-                return view('admin.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
+                return view('admin.estudiantes.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
             }
         } catch (OpenpayApiTransactionError $e) {
 
             if ($e->getErrorCode() == '1006') {
                 $dataTrans = (object) array('pago' => '--', 'id_trans' => '--', 'datePay' => '--', 'descrip' => '!Ya hay un pago registrado¡', 'order' => 'AunarVill' . $liquidacion->id);
                 $estado = "pago_ejecutado";
-                return view('admin.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
+                return view('admin.estudiantes.pagos..alertpago', compact('respuestas', 'estado', 'dataTrans'));
             }
             return response()->json([
                         'error' => [
@@ -263,22 +263,22 @@ class OpenPayController extends Controller {
 
             $dataTrans = (object) array('pago' => '--', 'id_trans' => '--', 'datePay' => '--', 'descrip' => '--', 'order' => '--');
             $estado = "no_completado";
-            return view('admin.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
+            return view('admin.estudiantes.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
         } catch (OpenpayApiConnectionError $e) {
 
             $dataTrans = (object) array('pago' => '--', 'id_trans' => '--', 'datePay' => '--', 'descrip' => '--', 'order' => '--');
             $estado = "no_conexion";
-            return view('admin.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
+            return view('admin.estudiantes.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
         } catch (OpenpayApiAuthError $e) {
 
             $dataTrans = (object) array('pago' => '--', 'id_trans' => '--', 'datePay' => '--', 'descrip' => '--', 'order' => '--');
             $estado = "no_autenticacion";
-            return view('admin.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
+            return view('admin.estudiantes.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
         } catch (OpenpayApiError $e) {
 
             $dataTrans = (object) array('pago' => '--', 'id_trans' => '--', 'datePay' => '--', 'descrip' => '--', 'order' => '--');
             $estado = "no_respuesta";
-            return view('admin.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
+            return view('admin.estudiantes.pagos.alertpago', compact('respuestas', 'estado', 'dataTrans'));
         } catch (Exception $e) {
             return response()->json([
                         'error' => [
@@ -293,7 +293,7 @@ class OpenPayController extends Controller {
     }
 
     public function token() {
-        return view('admin.pagos.generarToken');
+        return view('admin.estudiantes.pagos.generarToken');
     }
 
     public function getToken(Request $request) {

@@ -28,7 +28,7 @@ class PagoSeeder extends Seeder {
             'card_holder_name' => 'Juan Perez Ramirez',
             'card_allows_charges' => true,
             'card_allows_payouts' => true,
-            'card_bank_name' => 'Banamex',
+            'card_bank_name' => 'WmVSUVcvbEVSWDlTbEtDbUxJRnVXQT09',
             'status' => 'completed',
             'currency' => 'COP',
             'creation_date' => Carbon::now(),

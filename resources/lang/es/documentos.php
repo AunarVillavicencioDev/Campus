@@ -18,6 +18,7 @@ return [
      */
 
     'name' => 'Documentos',
+    'names' => 'Cargar Documentos',
     'tipo_form' => 'Tipo de matrícula',
     'descripcion' => 'Descripcion',
     'copia_de_cedula' => 'Copia de Cedula Al 150%',

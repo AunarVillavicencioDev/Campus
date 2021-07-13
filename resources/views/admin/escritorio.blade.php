@@ -9,8 +9,8 @@
 @section('title') @lang('translation.Dashboard') @endsection
 @section('content')
 @component('common-components.breadcrumb')
-@slot('pagetitle') Minible @endslot
-@slot('title') Dashboard @endslot
+@slot('title'){{trans("dashboard.name")}}  @endslot
+@slot('breadcrumb') {{Breadcrumbs::render(trans("dashboard.name"))}} @endslot
 @endcomponent 
 <div class="row">
     <div class="col-md-6 col-xl-3">

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '05b5c9997a19c00922f60d872c40dca2b3d0fe19',
+    'reference' => '448d340d5ec26cc7a91874da2d737eede91dde1a',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -51,6 +51,15 @@
       array (
         0 => '*',
       ),
+    ),
+    'davejamesmiller/laravel-breadcrumbs' => 
+    array (
+      'pretty_version' => '5.3.2',
+      'version' => '5.3.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '99f92a706faefb5e1816caa96e877a0184509e5b',
     ),
     'doctrine/inflector' => 
     array (
@@ -481,7 +490,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '05b5c9997a19c00922f60d872c40dca2b3d0fe19',
+      'reference' => '448d340d5ec26cc7a91874da2d737eede91dde1a',
     ),
     'laravel/sail' => 
     array (

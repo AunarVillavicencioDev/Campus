@@ -40,7 +40,7 @@ class InscripcionController extends Controller {
 
         $now = Carbon::now();
 
-        return view('admin.inscripciones.index', compact('paises', 'programas', 'now'));
+        return view('admin.estudiantes.inscripciones.index', compact('paises', 'programas', 'now'));
     }
 
     /**
@@ -59,7 +59,7 @@ class InscripcionController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(InscriptioCreateRequest $request) {
-
+//        dd($request);
         Inscription::create([
             'user_id' => $request->user_id,
             'pri_nombre' => $request->pri_nombre,
@@ -93,6 +93,8 @@ class InscripcionController extends Controller {
             'puntaje_saber' => $request->puntaje_saber,
             'colegio' => $request->colegio,
             'nivel_academico' => $request->nivel_academico,
+            'eps'=>$request->eps,
+            'sisben'=>$request->sisben
         ]);
         $message = "Registro completado.";
         return back()->with(compact('message'));

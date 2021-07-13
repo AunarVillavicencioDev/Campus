@@ -38,7 +38,7 @@ class Alerts {
                 'alert_see_report' => ($param['alert_see_report'] ?? ''),
             ]);
         }
-        
+
         Alerts::sentMail('luydjmix@gmail.com', 'asd', 'hello word');
         return $param['alert_name'];
     }
@@ -58,7 +58,7 @@ class Alerts {
         $objAlert->msj = $msj;
         $objAlert->sender = 'PL&R';
         $objAlert->company = $company;
- 
+
         Mail::to($mailto)->send(new OrderShipped($objAlert));
     }
 

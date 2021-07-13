@@ -22,7 +22,7 @@ class cargadocumentoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index($typeForm = '1') {
-        return view('admin.cargadedocumentos.cargadocumentos', compact('typeForm'));
+        return view('admin.estudiantes.cargadedocumentos.cargadocumentos', compact('typeForm'));
     }
 
     /**

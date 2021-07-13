@@ -25,8 +25,9 @@ class PagoController extends Controller {
      */
     public function index() {
         $user_id = Auth::id();
-        $pagos = Pago::where('id', $user_id)->get();
-        return view('admin.pagos.pagos', compact('pagos'));
+        $pagos = Pago::where('user_id', $user_id)->get();
+//        dd($pagos);
+        return view('admin.estudiantes.pagos.pagos', compact('pagos'));
     }
 
     public function indexTarjetas() {
@@ -35,7 +36,7 @@ class PagoController extends Controller {
         $liquidacion = Liquidation::where('user_id', $user->id)->where('period', $inscripcion->periodo_academico)->first();
         $pagos = Pago::where('id', $user->id)->get();
 
-        return view('admin.pagos.tarjetas', compact('user', 'liquidacion'));
+        return view('admin.estudiantes.pagos.tarjetas', compact('user', 'liquidacion'));
     }
 
     /**

@@ -2,10 +2,9 @@
 @section('title') @lang('translation.Dashboard') @endsection
 @section('content')
 @component('common-components.breadcrumb')
-@slot('pagetitle') Carga de Documentos @endslot
-@slot('title') Carga de Documentos @endslot
+@slot('title'){{trans("documentos.names")}}  @endslot
+@slot('breadcrumb') {{Breadcrumbs::render(trans("documentos.names"))}} @endslot
 @endcomponent 
-
 <div class="row align-items-center justify-content-center">
     <div class="col-xl-12 ">
         <div class="card">

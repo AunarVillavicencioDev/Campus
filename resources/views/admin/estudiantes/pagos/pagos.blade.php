@@ -2,8 +2,8 @@
 @section('title') @lang('translation.Dashboard') @endsection
 @section('content')
 @component('common-components.breadcrumb')
-@slot('pagetitle') Pagos @endslot
-@slot('title') Pagos @endslot
+@slot('title'){{trans("pagos.name")}}  @endslot
+@slot('breadcrumb') {{Breadcrumbs::render(trans("pagos.name"))}} @endslot
 @endcomponent 
 @section('css') 
 <link href= "{{ URL::asset('/assets/libs/datatables/datatables.min.css') }}"    rel="stylesheet" type="text/css">
@@ -50,22 +50,24 @@
                         <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap dataTable no-footer dtr-inline collapsed" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable-buttons_info">                        
                             <thead>
                                 <tr role="row">
-                                    <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 105px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Pagos</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 164px;" aria-label="Position: activate to sort column ascending">Fecha</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 72px;" aria-label="Office: activate to sort column ascending">Entidad de Pago</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 26px;" aria-label="Age: activate to sort column ascending">realizar Pago</th>
+                                    <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 105px;" aria-sort="ascending" aria-label="Fecha: activate to sort column descending">Fecha</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 164px;" aria-label="Pago: activate to sort column ascending">Detalle</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 72px;" aria-label="Entidad de Pago: activate to sort column ascending">Entidad de Pago</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 26px;" aria-label="Valor: activate to sort column ascending">Valor</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" style="width: 26px;" aria-label="Tipo pago: activate to sort column ascending">Tipo pago</th>
                                 </tr>
                             </thead>
                             <tbody> 
-                            @foreach($pagos as $items)
+                                @foreach($pagos as $items)
                                 <tr>
-                                    <td  tabindex="0">{{$items->description}}</td>
-                                    <td>{{$items->operation_date}}</td>
-                                    <td>{{$items->card_bank_name}}</td>
-                                    <td><a href="#">link1</a></td>                                
+                                    <td tabindex="0">{{$items->operation_date}}</td> 
+                                    <td >{{$items->description}}</td>
+                                    <td>{{Sed::decryption($items->card_bank_name, Auth::user()->document)}}</td>
+                                    <td >{{$items->amount}}</td>
+                                    <td>{{$items->method}}</td>
                                 </tr>
-                            @endforeach    
-                               
+                                @endforeach    
+
 
                             </tbody>
                         </table>

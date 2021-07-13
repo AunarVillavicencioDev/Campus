@@ -36,4 +36,16 @@ class Helper {
         return $program->Nombre;
     }
 
+    public static function estadoinscription($indice) {
+        dd($indice);
+        $estado = (object) array(
+                    '1' => 'Prospecto',
+                    '2' => 'Aspirante',
+                    '3' => 'Orden de liquidacion',
+                    '4' => 'Proceso de matricula',
+                    '5' => 'Matriculado',
+        );
+        return $estado->{$indice};
+    }
+
 }

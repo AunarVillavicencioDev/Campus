@@ -40,6 +40,34 @@ class AppServiceProvider extends ServiceProvider {
                 return 0;
             }
         });
+        Blade::if('valiTypeProfileEstudiante', function ($value) {
+            if ($value == '1') {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+        Blade::if('valiTypeProfileAdmisiones', function ($value) {
+            if ($value == '2') {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+        Blade::if('valiTypeProfileAcademico', function ($value) {
+            if ($value == '3') {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+        Blade::if('valiTypeProfileFinanciero', function ($value) {
+            if ($value == '4') {
+                return 1;
+            } else {
+                return 0;
+            }
+        });
     }
 
 }

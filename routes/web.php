@@ -57,6 +57,9 @@ Route::get('/factura/html/stream/{user_id}', [App\Http\Controllers\admin\Factura
 Route::get('/openpay', [App\Http\Controllers\OpenPayController::class, 'index'])->name('openpay.index');
 Route::post('/openpay/pay', [App\Http\Controllers\OpenPayController::class, 'store'])->name('openpay.store');
 
+
+Route::get('/admisiones/listadogeneral', [App\Http\Controllers\admin\ListadogeneralController::class, 'index'])->name('listadogeneral.index');
+
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
     $exitCode = Artisan::call('db:seed --class=UserSeeder');

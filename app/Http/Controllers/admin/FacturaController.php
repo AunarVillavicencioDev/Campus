@@ -151,7 +151,7 @@ class FacturaController extends Controller {
         $barcode->setFontSize(8);
         $code = $barcode->generate();
 //        dd($code);
-        return view('admin.pagos.factura', compact('code', 'time', 'timeExpiration', 'user', 'inscripcion', 'liquidacion'));
+        return view('admin.estudiantes.pagos.factura', compact('code', 'time', 'timeExpiration', 'user', 'inscripcion', 'liquidacion'));
     }
 
 }
