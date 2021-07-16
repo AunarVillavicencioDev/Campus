@@ -2,7 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    @valiTypeProfileEstudiante(Auth::user()->profil)
     {{ ActionValidate::validaInscripcion(Auth::id()) }}
+    @endvaliTypeProfileEstudiante
     @include('layouts.title-meta')
     @include('layouts.head')
 </head>

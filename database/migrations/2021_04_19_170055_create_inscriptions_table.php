@@ -48,6 +48,8 @@ class CreateInscriptionsTable extends Migration {
             $table->string('nivel_academico');
             $table->string('eps');
             $table->string('sisben');
+            $table->string('status')->default(1);
+            $table->string('asignado_agente')->default(0)->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('programa_id')->references('id')->on('programs')->onDelete('cascade');
             $table->timestamps();

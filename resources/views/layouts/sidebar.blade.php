@@ -71,7 +71,18 @@
                         <span>@lang('listadoGeneral.name')</span>
                     </a>
                 </li>
-
+                <li>
+                    <a href="{{route('oportunidad.index')}}">
+                        <i class="uil-medal"></i>
+                        <span>@lang('oportunidad.names')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('hv.index')}}">
+                        <i class="uil-file-check-alt"></i>
+                        <span>@lang('hv.names')</span>
+                    </a>
+                </li>
                 @endvaliTypeProfileAdmisiones
                 <!--                <li>
                                     <a href="{{route('inscripcion.index')}}">

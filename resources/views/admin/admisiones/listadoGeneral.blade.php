@@ -9,12 +9,6 @@
 @section('title') @lang('translation.Dashboard') @endsection
 <head>
     <link href = "http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.css" rel = "stylesheet" type = "text/css">
-    <!--Bootstrap Css -->
-    <link href = "/assets/css/bootstrap.min.css" id = "bootstrap-style" rel = "stylesheet" type = "text/css">
-    <!--Icons Css -->
-    <link href = "http://minible-v-light.laravel.themesbrand.com/assets/css/icons.min.css" id = "icons-style" rel = "stylesheet" type = "text/css">
-    <!--App Css-->
-    <link href = "/assets/css/app.min.css" id = "app-style" rel = "stylesheet" type = "text/css">
     <style>
         #ocultar1{visibility:hidden;}
         #ocultar2{visibility:hidden;}
@@ -113,20 +107,9 @@ use App\Helpers\Status;
 
 @endsection
 @section('script')
-
-<script src = "http://minible-v-light.laravel.themesbrand.com/assets/libs/bootstrap/bootstrap.min.js"></script>
-<script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/metismenu/metismenu.min.js"></script>
-<script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/jquery/jquery.min.js"></script><script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/simplebar/simplebar.min.js"></script>
-<script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/node-waves/node-waves.min.js"></script>
-<script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/waypoints/waypoints.min.js"></script>
-<script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/jquery-counterup/jquery-counterup.min.js"></script>
-
 <script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.js"></script>
 <script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/jszip/jszip.min.js"></script>
 <script src="http://minible-v-light.laravel.themesbrand.com/assets/libs/pdfmake/pdfmake.min.js"></script>
 <script src="http://minible-v-light.laravel.themesbrand.com/assets/js/pages/datatables.init.js"></script>
-
-<!-- App js -->
-<script src="http://minible-v-light.laravel.themesbrand.com/assets/js/app.min.js"></script>
 
 @endsection

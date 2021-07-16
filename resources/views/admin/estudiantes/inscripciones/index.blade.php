@@ -9,8 +9,8 @@
 @section('title') @lang('inscripcion.name') @endsection
 @section('content')
 @component('common-components.breadcrumb')
-@slot('title'){{trans("inscripcion.names")}}  @endslot
-@slot('breadcrumb') {{Breadcrumbs::render(trans("inscripcion.names"))}} @endslot
+@slot('title'){{trans("inscripcion.name")}}  @endslot
+@slot('breadcrumb') {{Breadcrumbs::render(trans("inscripcion.name"))}} @endslot
 @endcomponent 
 <div class="row">
     <div class="col-lg-12">

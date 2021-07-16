@@ -59,6 +59,11 @@ Route::post('/openpay/pay', [App\Http\Controllers\OpenPayController::class, 'sto
 
 
 Route::get('/admisiones/listadogeneral', [App\Http\Controllers\admin\ListadogeneralController::class, 'index'])->name('listadogeneral.index');
+Route::get('/admisiones/gestionaroportunidades', [App\Http\Controllers\admin\OportunidadController::class, 'index'])->name('oportunidad.index');
+Route::get('/admisiones/gestionaroportunidad/{oportunida_id}', [App\Http\Controllers\admin\OportunidadController::class, 'edit'])->name('oportunidad.edit');
+Route::post('/admisiones/gestionaroportunidad/guardar', [App\Http\Controllers\admin\OportunidadController::class, 'store'])->name('oportunidad.store');
+Route::get('/admisiones/gestionarhvs', [App\Http\Controllers\admin\HojadevidaController::class, 'index'])->name('hv.index');
+Route::post('/admisiones/gestionarhvs/guardar', [App\Http\Controllers\admin\HojadevidaController::class, 'store'])->name('hv.store');
 
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');

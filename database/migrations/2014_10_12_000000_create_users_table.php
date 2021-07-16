@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('movil');
             $table->string('aceptar_terminos');
             $table->string('profile');
+            $table->string('status');
             $table->rememberToken();
             $table->timestamps();
         });
