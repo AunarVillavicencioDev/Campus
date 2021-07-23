@@ -77,7 +77,7 @@
                                         <p><b> Estado de la Gestion </b> <p>
                                     </div>   
                                     <div class="row">
-                                        {!!  Form::select('estado', ['' => 'Por gestionar', '2' => 'Primer contacto telefónico','3' => 'Contacto telefónico adicional','4' => 'Apoyo a inscripción','5' => 'Apoyo generación de liquidación','6' => 'Apoyo de carga de documentos','7' => 'Cierre de atención'], ['class' => 'form-control form-control-lg', 'id'=>'estado']); !!}
+                                        {!!  Form::select('estado', ['' => 'Marcar gestion', '2' => 'Primer contacto telefónico','3' => 'Contacto telefónico adicional','4' => 'Apoyo a inscripción','5' => 'Apoyo generación de liquidación','6' => 'Apoyo de carga de documentos','7' => 'Cierre de atención'], ['class' => 'form-control form-control-lg', 'id'=>'estado']); !!}
                                     </div> 
                                 </div>
                             </div>

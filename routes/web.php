@@ -67,6 +67,11 @@ Route::post('/admisiones/gestionarhvs/guardar', [App\Http\Controllers\admin\Hoja
 
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
+
+    return 'refresh db Ok';
+});
+
+Route::get('/config-seeder-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('db:seed --class=UserSeeder');
     $exitCode = Artisan::call('db:seed --class=PermissionSeeder');
     $exitCode = Artisan::call('db:seed --class=ProgramSeeder');
@@ -75,8 +80,9 @@ Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('db:seed --class=AlertSeeder');
     $exitCode = Artisan::call('db:seed --class=PriceSeeder');
     $exitCode = Artisan::call('db:seed --class=PagoSeeder');
+    $exitCode = Artisan::call('db:seed --class=GestionagenteSeeder');
 
-    return 'refresh db Ok';
+    return 'refresh Seeder Ok';
 });
 
 Route::get('/config-clean-cache-dev-2021-03-29', function() {

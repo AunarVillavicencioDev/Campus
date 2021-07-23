@@ -28,7 +28,6 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title"></h4>
                 @if ($errors->any())
                 <div class="alert alert-danger alert-dismissible fade show">
                     <ul>
@@ -51,6 +50,7 @@
                                         <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 106px;" aria-label="Estado: activate to sort column ascending">Estado</th>
                                         <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 35px;" aria-label="Ciudad: activate to sort column ascending">Ciudad</th>
                                         <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 95px;" aria-label="Edad: activate to sort column ascending">Edad</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Gestion: activate to sort column ascending">Gestion</th>
                                         <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Colegio: activate to sort column ascending">Colegio</th>
                                         <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Homologa: activate to sort column ascending">Homologa</th>
                                         <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Gestionar: activate to sort column ascending">Gestionar</th>
@@ -64,6 +64,7 @@
                                         <td>{{Helper::consultDataOpportuni($items->id)->estado}}</td>
                                         <td>{{Helper::consultDataOpportuni($items->id)->municipio}}</td>
                                         <td>{{Helper::consultDataOpportuni($items->id)->edad}}</td>
+                                        <td>{{Helper::consultDataOpportuni($items->id)->gestion}}</td>
                                         <td> {{Helper::consultDataOpportuni($items->id)->colegio}}</td>
                                         <td>
                                             <div class="custom-control custom-checkbox">

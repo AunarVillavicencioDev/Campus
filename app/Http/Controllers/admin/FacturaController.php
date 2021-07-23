@@ -150,6 +150,9 @@ class FacturaController extends Controller {
         $barcode->setThickness(50);
         $barcode->setFontSize(8);
         $code = $barcode->generate();
+         Inscription::where('id', $inscripcion->id)->update([
+                'status' => '3',
+            ]);
 //        dd($code);
         return view('admin.estudiantes.pagos.factura', compact('code', 'time', 'timeExpiration', 'user', 'inscripcion', 'liquidacion'));
     }

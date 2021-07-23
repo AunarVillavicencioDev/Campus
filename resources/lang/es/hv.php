@@ -20,4 +20,6 @@ return [
 
     'name' => 'Hoja de vida',
     'names'=>'Gestionar Hojas de vida',
+    'gestion'=>'Estado de la Gestion',
+    'rObsevaciones' => 'Registrar observaciones'
 ];

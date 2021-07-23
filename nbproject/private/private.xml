@@ -5,15 +5,13 @@
         <group>
             <file>file:/C:/xampp/htdocs/Campus/resources/lang/es/hv.php</file>
             <file>file:/C:/xampp/htdocs/Campus/app/Http/Controllers/admin/HojadevidaController.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/resources/views/admin/admisiones/gestionarOportunidades.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/resources/views/common-components/modal_oportunidad/gen_oportunidad.blade.php</file>
             <file>file:/C:/xampp/htdocs/Campus/routes/web.php</file>
             <file>file:/C:/xampp/htdocs/Campus/resources/views/layouts/sidebar.blade.php</file>
+            <file>file:/C:/xampp/htdocs/Campus/app/Http/Controllers/admin/ListadogeneralController.php</file>
             <file>file:/C:/xampp/htdocs/Campus/app/Helpers/Helper.php</file>
             <file>file:/C:/xampp/htdocs/Campus/routes/breadcrumbs.php</file>
             <file>file:/C:/xampp/htdocs/Campus/resources/views/admin/admisiones/gestionarhvs.blade.php</file>
             <file>file:/C:/xampp/htdocs/Campus/resources/views/common-components/modal_hojadevida/gen_hojadevida.blade.php</file>
-            <file>file:/C:/xampp/htdocs/Campus/app/Http/Controllers/admin/OportunidadController.php</file>
         </group>
     </open-files>
 </project-private>

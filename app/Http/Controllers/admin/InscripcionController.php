@@ -11,6 +11,7 @@ use App\Http\Requests\InscriptioCreateRequest;
 use App\Models\Countrie;
 use App\Models\Program;
 use App\Models\Inscription;
+use App\Models\Oportunidad;
 
 class InscripcionController extends Controller {
 
@@ -96,6 +97,7 @@ class InscripcionController extends Controller {
             'eps'=>$request->eps,
             'sisben'=>$request->sisben
         ]);
+        
         $message = "Registro completado.";
         return back()->with(compact('message'));
     }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGestionagentesTabel extends Migration
+class CreateGestionagentesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateGestionagentesTabel extends Migration
      */
     public function up()
     {
-        Schema::create('gestionagentes_tabel', function (Blueprint $table) {
+        Schema::create('gestionagentes', function (Blueprint $table) {
             $table->id();
             $table->string('student_id');//estudiante
             $table->string('agent_id');
@@ -32,6 +32,6 @@ class CreateGestionagentesTabel extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gestionagentes_tabel');
+        Schema::dropIfExists('gestionagentes');
     }
 }

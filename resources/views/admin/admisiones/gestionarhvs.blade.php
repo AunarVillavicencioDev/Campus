@@ -8,7 +8,7 @@
 @extends('layouts.master')
 @section('title') @lang('translation.Dashboard') @endsection
 @section('css')
-<link href="http://minible-v-light.laravel.themesbrand.com/assets/libs/datatables/datatables.min.css" rel="stylesheet" type="text/css">
+<link href= "{{ URL::asset('/assets/libs/datatables/datatables.min.css') }}"    rel="stylesheet" type="text/css">
 <style>
     #ocultar1{visibility:hidden;}
     #ocultar2{visibility:hidden;}
@@ -24,38 +24,48 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title"></h4>
+                @if ($errors->any())
+                <div class="alert alert-danger alert-dismissible fade show">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                    </button>
+                </div>
+                @endif
                 <div id="datatable-buttons_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                     <div class="row">
                         <div class="col-sm-12">
                             <table id="datatable-buttons" class="table  table-hover table-bordered dt-responsive nowrap dataTable no-footer dtr-inline" style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid" aria-describedby="datatable-buttons_info">
                                 <thead>
                                     <tr role="row">
-                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 148px;" aria-sort="ascending" aria-label="Id Oportunidad: activate to sort column descending">Id Oportunidad</th>
-                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 226px;" aria-label="Nombre: activate to sort column ascending">Nombre</th>
-                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 106px;" aria-label="Estado: activate to sort column ascending">Estado</th>
-                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Gestionar: activate to sort column ascending">Gestionar</th>
-                                    </tr>
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 148px;" aria-sort="ascending" aria-label="Id Oportunidad: activate to sort column descending">{{trans("gestionhojadevida.id_oportunidad")}}</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 226px;" aria-label="Nombre: activate to sort column ascending">{{trans("gestionhojadevida.nombre")}}</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 106px;" aria-label="Estado: activate to sort column ascending">{{trans("gestionhojadevida.estado")}}</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 91px;" aria-label="Gestionar: activate to sort column ascending">Gestionar</th></tr>
                                 </thead>
-                                <tbody>
-                                    @foreach($dboportunidades as $items)                                
+
+
+                                <tbody> 
+                                    @foreach($HojadevidaData as $items)                                
                                     <tr>
-                                        <td class="dtr-control sorting_1" tabindex="0">{{Helper::consultDataOpportuni($items->id)->id}}</td>
-                                        <td>{{Helper::consultDataOpportuni($items->id)->name}}</td>
-                                        <td>{{Helper::consultDataOpportuni($items->id)->estado}}</td>
-                                        <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl{{Helper::consultDataOpportuni($items->id)->id}}">Gestionar</a></td>
+                                        <td class="dtr-control sorting_1" tabindex="0">{{Helper::consultDataHv($items->inscription_id)->id}}</td>
+                                        <td>{{Helper::consultDataHv($items->inscription_id)->name}}</td>
+                                        <td>{{Helper::estadohojadevida($items->status)}}</td>
+                                        <td>  <a href="" type="button"  data-bs-toggle="modal" data-bs-target=".bs-modal-genhojadevida-xl{{Helper::consultDataHv($items->inscription_id)->id}}">Gestionar</a></td>
                                     </tr>
+
                                     @component('common-components.modal_hojadevida.gen_hojadevida')
-                                    @slot('id_oportunidad') {{Helper::consultDataOpportuni($items->id)->id}} @endslot 
-                                    @slot('nombre') {{Helper::consultDataOpportuni($items->id)->name}}@endslot
-                                    @slot('idusuario') {{Helper::consultDataOpportuni($items->id)->user_id}}@endslot
-                                    @slot('edad') {{Helper::consultDataOpportuni($items->id)->edad}} @endslot
-                                    @slot('direcciondomicilio') {{Helper::consultDataOpportuni($items->id)->direccion}} @endslot
-                                    @slot('barrio') barrio @endslot
-                                    @slot('departamento') {{Helper::consultDataOpportuni($items->id)->departamento}} @endslot
-                                    @slot('municipio') {{Helper::consultDataOpportuni($items->id)->municipio}} @endslot
-                                    @slot('celular') {{Helper::consultDataOpportuni($items->id)->movil}} @endslot
-                                    @slot('telefono') 30000000 @endslot
+                                    @slot('id_oportunidad') {{Helper::consultDataHv($items->inscription_id)->id}} @endslot 
+                                    @slot('nombre') {{Helper::consultDataHv($items->inscription_id)->name}}@endslot
+                                    @slot('idusuario') {{Helper::consultDataHv($items->inscription_id)->user_id}}@endslot
+                                    @slot('edad') {{Helper::consultDataHv($items->inscription_id)->edad}} @endslot
+                                    @slot('direcciondomicilio') {{Helper::consultDataHv($items->inscription_id)->direccion}} @endslot  
+                                    @slot('departamento') {{Helper::consultDataHv($items->inscription_id)->departamento}} @endslot
+                                    @slot('municipio') {{Helper::consultDataHv($items->inscription_id)->municipio}} @endslot
+                                    @slot('celular') {{Helper::consultDataHv($items->inscription_id)->movil}} @endslot                      
                                     @endcomponent
                                     @endforeach    
                                 </tbody>

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class OportunidaStoreRequest extends FormRequest {
+class HojadevidaStoreRequest extends FormRequest {
 
     /**
      * Determine if the user is authorized to make this request.
@@ -23,17 +23,16 @@ class OportunidaStoreRequest extends FormRequest {
     public function rules() {
         return [
             'id' => 'required',
-            'estado' => 'required',
-            'descripcion' => 'required|max:1200',
+            'status' => 'required',
+            'correciones' => 'nullable|max:1200',
         ];
     }
 
     public function messages() {
         return [
             'id.required' => 'El campo Id es requerido.',
-            'estado.required' => 'El campo ' . __('oportunidad.estadoG') . ' es requerido.',
-            'descripcion.required' => 'El campo ' . __('oportunidad.descrip') . ' es requerido.',
-            'descripcion.max' => 'El campo ' . __('oportunidad.descrip') . ' pasa del máximo caracteres permitidos.',
+            'status.required' => 'El campo ' . __('hv.gestion') . ' es requerido.',
+            'correciones.max' => 'El campo ' . __('hv.rObsevaciones') . ' pasa del máximo caracteres permitidos.',
         ];
     }
 

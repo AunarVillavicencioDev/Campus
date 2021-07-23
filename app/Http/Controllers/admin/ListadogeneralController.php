@@ -8,7 +8,8 @@ use Auth;
 use App\Models\Inscription;
 use App\Models\User;
 use App\Models\Gestionagente;
-use App\Helpers\Status;
+use App\Models\Oportunidad;
+use App\Helpers\Helper;
 
 class ListadogeneralController extends Controller {
 
@@ -22,13 +23,15 @@ class ListadogeneralController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        //$user_id = Auth::id();
-        //$user_profile = Auth::user()->profile; 
-        //$estado = Status::estadoinscription($user_profile);
+        Helper::updateOportu();
+        $inscripcionesvista = Inscription::where('status', '1')->get();
+        foreach ($inscripcionesvista as $items) {
 
-        $dbinscripciones = Inscription::all();
+            $repartidoroportunidades[] = $items->id;
+        }
+        $oportunidades = Oportunidad::whereIn('inscription_id', $repartidoroportunidades)->get();
 
-        return view('admin.admisiones.listadogeneral', compact('dbinscripciones'));
+        return view('admin.admisiones.listadoGeneral', compact('oportunidades'));
     }
 
 }
