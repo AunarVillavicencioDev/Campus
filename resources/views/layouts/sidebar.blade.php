@@ -8,7 +8,7 @@
                 <img src="{{ URL::asset('/assets/images/logo-sm.png') }}" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="20">
+                <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="50">
             </span>
         </a>
 
@@ -17,7 +17,7 @@
                 <img src="{{ URL::asset('/assets/images/logo-sm.png') }}" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="20">
+                <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="50">
             </span>
         </a>
     </div>
@@ -83,15 +83,35 @@
                         <span>@lang('hv.names')</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{route('reporac.migestion')}}">
+                        <i class="uil-comment-alt-chart-lines"></i>
+                        <span>@lang('reportesAdmicionesC.name1')</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('reporac.reporteMatriculas')}}">
+                        <i class="uil-chart-line"></i>
+                        <span>@lang('reportesAdmicionesC.name2')</span>
+                    </a>
+                </li>
                 @endvaliTypeProfileAdmisiones
-                <!--                <li>
-                                    <a href="{{route('inscripcion.index')}}">
-                                        <i class="uil-user-circle"></i>
-                                        <span>@lang('inscripcion.name')</span>
-                                    </a>
-                                </li>-->
-
-
+                @valiTypeProfileAcademico(Auth::user()->profile)
+                <li>
+                    <a href="{{route('homologacion.index')}}">
+                        <i class="uil-file-check-alt"></i>
+                        <span>@lang('homologacion.name')</span>
+                    </a>
+                </li>
+                @endvaliTypeProfileAcademico
+                @valiTypeProfileFinanciero(Auth::user()->profile)
+                <li>
+                    <a href="{{route('financierogpago.index')}}">
+                        <i class="uil-money-withdrawal"></i>
+                        <span>@lang('financieroPagos.name')</span>
+                    </a>
+                </li>
+                @endvaliTypeProfileFinanciero
 
             </ul>
         </div>

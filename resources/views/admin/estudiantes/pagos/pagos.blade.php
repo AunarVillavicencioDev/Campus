@@ -62,7 +62,7 @@
                                 <tr>
                                     <td tabindex="0">{{$items->operation_date}}</td> 
                                     <td >{{$items->description}}</td>
-                                    <td>{{Sed::decryption($items->card_bank_name, Auth::user()->document)}}</td>
+                                    <td>{{Sed::decryption($items->pay_bank_name, Auth::user()->document)}}</td>
                                     <td >{{$items->amount}}</td>
                                     <td>{{$items->method}}</td>
                                 </tr>

@@ -48,11 +48,11 @@
         font-size: 25px; 
         border :0; 
     }
-    .card-body {
+    .car-body {
         padding: 0rem;
     }
 
-    .conten-checkout-cards {
+    .conten-checkout-cars {
         position: relative;
         margin: 16px 0px;
     }
@@ -60,7 +60,7 @@
 @endsection
 
 @section('content')
-<div class="conten-checkout-cards">
+<div class="conten-checkout-cars">
     <form action="{{route('openpay.store')}}" method="POST" id="payment-form">   
         @csrf
         <input type="hidden" name="token_id" id="token_id">

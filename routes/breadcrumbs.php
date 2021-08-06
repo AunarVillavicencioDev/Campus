@@ -53,15 +53,15 @@ $trail->push(trans("oportunidad.name"), route('oportunidad.edit', ['oportunida_i
 });
 
 // Home > vermigestion
-Breadcrumbs::for(trans("vermigestion.name"), function ($trail) {
+Breadcrumbs::for(trans("reportesAdmicionesC.name1"), function ($trail) {
 $trail->parent(trans("dashboard.name"));
-$trail->push(trans("vermigestion.name"), route('vermigestion.index'));
+$trail->push(trans("reportesAdmicionesC.name1"), route('reporac.migestion'));
 });
 
 // Home > reportematriculas
-Breadcrumbs::for(trans("reportematriculas.name"), function ($trail) {
+Breadcrumbs::for(trans("reportesAdmicionesC.name2"), function ($trail) {
 $trail->parent(trans("dashboard.name"));
-$trail->push(trans("reportematriculas.name"), route('reportematriculas.index'));
+$trail->push(trans("reportesAdmicionesC.name2"), route('reporac.reporteMatriculas'));
 });
 
 // Home > chequeoTarjetas
@@ -77,7 +77,7 @@ $trail->push(trans("homologacion.name"), route('homologacion.index'));
 });
 
 // Home > gestion pago
-Breadcrumbs::for(trans("gestionpago.name"), function ($trail) {
+Breadcrumbs::for(trans("financieroPagos.name"), function ($trail) {
 $trail->parent(trans("dashboard.name"));
-$trail->push(trans("gestionpago.name"), route('gestionpago.index'));
+$trail->push(trans("financieroPagos.name"), route('financierogpago.index'));
 });

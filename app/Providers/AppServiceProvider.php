@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider {
                 return 0;
             }
         });
-        
+
         Blade::if('valiTypeFormNuevo', function ($value) {
             if ($value != '1') {
                 return 1;

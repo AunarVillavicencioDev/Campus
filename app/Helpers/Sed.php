@@ -30,8 +30,11 @@ class Sed {
     public static function decryption($string, $token) {
 //        dd($string);
         $key = hash('sha256', $token);
+//        dd($key);
         $iv = substr(hash('sha256', Sed::key4()), 0, 16);
+//        dd($iv);
         $output = openssl_decrypt(base64_decode($string), Sed::method(), $key, 0, $iv);
+//        dd($output);
         return $output;
     }
 

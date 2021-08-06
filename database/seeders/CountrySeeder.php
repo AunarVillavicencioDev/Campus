@@ -13,6 +13,7 @@ class CountrySeeder extends Seeder {
      * @return void
      */
     public function run() {
+        Countrie::create(['iso' => 'CO', 'pais' => 'Colombia',]);
         Countrie::create(['iso' => 'AF', 'pais' => 'Afganistán',]);
         Countrie::create(['iso' => 'AX', 'pais' => 'Islas Gland',]);
         Countrie::create(['iso' => 'AL', 'pais' => 'Albania',]);
@@ -64,7 +65,6 @@ class CountrySeeder extends Seeder {
         Countrie::create(['iso' => 'CX', 'pais' => 'Isla de Navidad',]);
         Countrie::create(['iso' => 'VA', 'pais' => 'Ciudad del Vaticano',]);
         Countrie::create(['iso' => 'CC', 'pais' => 'Islas Cocos',]);
-        Countrie::create(['iso' => 'CO', 'pais' => 'Colombia',]);
         Countrie::create(['iso' => 'KM', 'pais' => 'Comoras',]);
         Countrie::create(['iso' => 'CD', 'pais' => 'República Democrática del Congo',]);
         Countrie::create(['iso' => 'CG', 'pais' => 'Congo',]);

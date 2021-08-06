@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
 
 /*
   |--------------------------------------------------------------------------
@@ -49,8 +50,8 @@ Route::get('storage/app/aunar/Documents/{id}/{archivo}', function ($id, $archivo
     abort(404);
 });
 
-Route::get('/pagos', [App\Http\Controllers\admin\pagoController::class, 'index'])->name('pagos.index');
-Route::get('/pagos/tarjetas', [App\Http\Controllers\admin\pagoController::class, 'indexTarjetas'])->name('pagos.cards');
+Route::get('/pagos', [App\Http\Controllers\admin\PagoController::class, 'index'])->name('pagos.index');
+Route::get('/pagos/tarjetas', [App\Http\Controllers\admin\PagoController::class, 'indexTarjetas'])->name('pagos.cards');
 
 Route::get('/factura/html/stream/{user_id}', [App\Http\Controllers\admin\FacturaController::class, 'htmlStream'])->name('factura.htmlStream');
 
@@ -64,6 +65,15 @@ Route::get('/admisiones/gestionaroportunidad/{oportunida_id}', [App\Http\Control
 Route::post('/admisiones/gestionaroportunidad/guardar', [App\Http\Controllers\admin\OportunidadController::class, 'store'])->name('oportunidad.store');
 Route::get('/admisiones/gestionarhvs', [App\Http\Controllers\admin\HojadevidaController::class, 'index'])->name('hv.index');
 Route::post('/admisiones/gestionarhvs/guardar', [App\Http\Controllers\admin\HojadevidaController::class, 'store'])->name('hv.store');
+Route::get('/admisiones/migestion', [App\Http\Controllers\admin\ReportesAdmicionesCController::class, 'miGestion'])->name('reporac.migestion');
+Route::get('/admisiones/reportematriculas', [App\Http\Controllers\admin\ReportesAdmicionesCController::class, 'reporteMatriculas'])->name('reporac.reporteMatriculas');
+
+Route::get('/homologacion', [App\Http\Controllers\admin\HomologacionController::class, 'index'])->name('homologacion.index');
+Route::post('/homologacion/store', [App\Http\Controllers\admin\HomologacionController::class, 'store'])->name('homologacion.store');
+
+Route::get('/financiero/gestionpago', [App\Http\Controllers\admin\GestionpagoController::class, 'index'])->name('financierogpago.index');
+Route::post('/financiero/gestionpago/masivo', [App\Http\Controllers\admin\GestionpagoController::class, 'store'])->name('financierogpago.store');
+
 
 Route::get('/config-db-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('migrate:fresh');
@@ -79,6 +89,7 @@ Route::get('/config-seeder-refactori-dev-2021-03-29', function() {
     $exitCode = Artisan::call('db:seed --class=CountrySeeder');
     $exitCode = Artisan::call('db:seed --class=AlertSeeder');
     $exitCode = Artisan::call('db:seed --class=PriceSeeder');
+    $exitCode = Artisan::call('db:seed --class=LiquidationSeeder');
     $exitCode = Artisan::call('db:seed --class=PagoSeeder');
     $exitCode = Artisan::call('db:seed --class=GestionagenteSeeder');
 

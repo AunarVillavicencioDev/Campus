@@ -12,7 +12,7 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <a href="{{ url('index') }}" class="mb-5 d-block auth-logo">
-                            <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="22"
+                            <img src="{{ URL::asset('/assets/images/logo-dark.png') }}" alt="" height="120"
                                 class="logo logo-dark">
                             <img src="{{ URL::asset('/assets/images/logo-light.png') }}" alt="" height="22"
                                 class="logo logo-light">
@@ -72,8 +72,13 @@
                                         <button class="btn btn-primary w-sm waves-effect waves-light" type="submit">Log
                                             In</button>
                                     </div>
+                                    <div class="mt-3 text-center align-center">
+                                        <img src="{{ URL::asset('/assets/images/logo-dark-bureau-veritas.png') }}" alt="" width="70%"
+                                class="logo logo-dark mx-auto">
+                                    </div>
+                                    
 
-                                    <div class="mt-4 text-center">
+<!--                                    <div class="mt-4 text-center">
                                         <div class="signin-other-title">
                                             <h5 class="font-size-14 mb-3 title">Sign in with</h5>
                                         </div>
@@ -99,7 +104,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div>-->
 
                                     <div class="mt-4 text-center">
                                         <p class="mb-0">Don't have an account ? <a href="{{ url('register') }}?type=1"

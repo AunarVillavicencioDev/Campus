@@ -8,7 +8,9 @@ class CreatePagosTable extends Migration {
 
     /**
      * Run the migrations.
-     *
+     *esta tabla esta echa con base a la lista de informacion de openPay para pagos con tarjetas
+     * debe tener encuanta que esta tabla es universar y los valores se homologan a los corespondientes
+     * a valores de otros tipos de pago debe tener encuanta que columnas como pay_type corresponde al tipo de pago
      * @return void
      */
     public function up() {
@@ -22,12 +24,12 @@ class CreatePagosTable extends Migration {
             $table->string('method');
             $table->string('operation_type');
             $table->string('transaction_type');
-            $table->string('card_type');
-            $table->string('card_brand');
-            $table->string('card_holder_name');
-            $table->boolean('card_allows_charges');
-            $table->boolean('card_allows_payouts');
-            $table->string('card_bank_name');
+            $table->string('pay_type');
+            $table->string('pay_brand');
+            $table->string('pay_holder_name');
+            $table->boolean('pay_allows_charges');
+            $table->boolean('pay_allows_payouts');
+            $table->string('pay_bank_name');
             $table->string('status');
             $table->string('currency')->nullable();
             $table->dateTime('creation_date');

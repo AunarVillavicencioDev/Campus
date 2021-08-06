@@ -31,6 +31,7 @@ class Documentos_user extends Model
         'examen_serologia',
         'soporte_pago',
         'resolucion_acta_homologacion',
+        'formato_estudio_homologacion',
         'certificado_notas',
         'contenidos_tematicos',
         'carnet_vacunas',

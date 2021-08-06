@@ -29,6 +29,7 @@ class CreateDocumentosUsersTable extends Migration {
             $table->string('examen_serologia');
             $table->string('soporte_pago');
             $table->string('resolucion_acta_homologacion')->nullable();
+            $table->string('formato_estudio_homologacion')->nullable();
             $table->string('certificado_notas')->nullable();
             $table->string('contenidos_tematicos')->nullable();
             $table->string('carnet_vacunas')->nullable();

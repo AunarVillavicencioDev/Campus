@@ -27,97 +27,6 @@ class OpenPayController extends Controller {
     function __construct() {
         
     }
-
-//    public function index() {
-//
-//        $request = array('register' => '00001', 'attrip' => array('name'));
-//        try {
-//            $openpay = \Openpay::getInstance('mbpnecurd3xny4z7dtwr', 'sk_b122651daeb54553b818ae9c83339deb', 'CO');
-//
-//            $customer = array(
-//                'name' => 'Juan',
-//                'last_name' => 'Vazquez Juarez',
-//                'phone_number' => '4423456723',
-//                'email' => 'juan.vazquez@empresa.com.mx');
-//
-//            $chargeRequest = array(
-//                'method' => 'card',
-//                'source_id' => 'k5prog6dr4fglfaxuadz',
-//                'amount' => 100,
-//                'currency' => 'COP',
-//                'description' => 'Cargo inicial a mi merchant',
-//                'order_id' => 'oid-00051',
-//                'device_session_id' => 'kR1MiQhz2otdIuUlQkbEyitIqVMiI16f',
-//                'customer' => $customer);
-//
-//            $charge = $openpay->charges->create($chargeRequest);
-//
-//            return response()->json([
-//                        'data' => $charge->id
-//            ]);
-//        } catch (OpenpayApiTransactionError $e) {
-//            return response()->json([
-//                        'error' => [
-//                            'category' => $e->getCategory(),
-//                            'error_code' => $e->getErrorCode(),
-//                            'description' => $e->getMessage(),
-//                            'http_code' => $e->getHttpCode(),
-//                            'request_id' => $e->getRequestId()
-//                        ]
-//            ]);
-//        } catch (OpenpayApiRequestError $e) {
-//            return response()->json([
-//                        'error' => [
-//                            'category' => $e->getCategory(),
-//                            'error_code' => $e->getErrorCode(),
-//                            'description' => $e->getMessage(),
-//                            'http_code' => $e->getHttpCode(),
-//                            'request_id' => $e->getRequestId()
-//                        ]
-//            ]);
-//        } catch (OpenpayApiConnectionError $e) {
-//            return response()->json([
-//                        'error' => [
-//                            'category' => $e->getCategory(),
-//                            'error_code' => $e->getErrorCode(),
-//                            'description' => $e->getMessage(),
-//                            'http_code' => $e->getHttpCode(),
-//                            'request_id' => $e->getRequestId()
-//                        ]
-//            ]);
-//        } catch (OpenpayApiAuthError $e) {
-//            return response()->json([
-//                        'error' => [
-//                            'category' => $e->getCategory(),
-//                            'error_code' => $e->getErrorCode(),
-//                            'description' => $e->getMessage(),
-//                            'http_code' => $e->getHttpCode(),
-//                            'request_id' => $e->getRequestId()
-//                        ]
-//            ]);
-//        } catch (OpenpayApiError $e) {
-//            return response()->json([
-//                        'error' => [
-//                            'category' => $e->getCategory(),
-//                            'error_code' => $e->getErrorCode(),
-//                            'description' => $e->getMessage(),
-//                            'http_code' => $e->getHttpCode(),
-//                            'request_id' => $e->getRequestId()
-//                        ]
-//            ]);
-//        } catch (Exception $e) {
-//            return response()->json([
-//                        'error' => [
-//                            'category' => $e->getCategory(),
-//                            'error_code' => $e->getErrorCode(),
-//                            'description' => $e->getMessage(),
-//                            'http_code' => $e->getHttpCode(),
-//                            'request_id' => $e->getRequestId()
-//                        ]
-//            ]);
-//        }
-//    }
-
     /**
      * Create charge in OpenPay
      * https://www.openpay.mx/docs/api/?php#con-id-de-tarjeta-o-token
@@ -208,7 +117,7 @@ class OpenPayController extends Controller {
                 'currency' => 'COP',
                 "iva" => "0",
                 'description' => 'Pago Aunar Villavicencio ' . $program->Nombre,
-                'order_id' => 'AunarVill103' . $liquidacion->id,
+                'order_id' => 'AunarVill107' . $liquidacion->id,
                 'device_session_id' => $request->deviceIdHiddenFieldName,
                 'customer' => $customer
             );
@@ -224,12 +133,12 @@ class OpenPayController extends Controller {
                         'method' => $charge2->serializableData['method'],
                         'operation_type' => $charge2->operation_type,
                         'transaction_type' => $charge2->transaction_type,
-                        'card_type' => Sed::encryption($charge2->card->type, $user->document),
-                        'card_brand' => Sed::encryption($charge2->card->brand, $user->document),
-                        'card_holder_name' => Sed::encryption($charge2->card->serializableData['holder_name'], $user->document),
-                        'card_allows_charges' => $charge2->card->allows_charges,
-                        'card_allows_payouts' => $charge2->card->allows_payouts,
-                        'card_bank_name' => Sed::encryption($charge2->card->bank_name, $user->document),
+                        'pay_type' => Sed::encryption($charge2->card->type, $user->document),
+                        'pay_brand' => Sed::encryption($charge2->card->brand, $user->document),
+                        'pay_holder_name' => Sed::encryption($charge2->card->serializableData['holder_name'], $user->document),
+                        'pay_allows_charges' => $charge2->card->allows_charges,
+                        'pay_allows_payouts' => $charge2->card->allows_payouts,
+                        'pay_bank_name' => Sed::encryption($charge2->card->bank_name, $user->document),
                         'status' => Sed::encryption($charge2->status, $user->document),
                         'currency' => Sed::encryption($charge2->currency, $user->document),
                         'creation_date' => Carbon::parse($charge2->creation_date)->format('Y-m-d H:i:s'),
